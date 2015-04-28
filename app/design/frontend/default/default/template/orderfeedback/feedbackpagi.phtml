@@ -1,0 +1,81 @@
+<?php
+$orderfeedback = $this->getFeedbackcollection();
+
+if($orderfeedback):
+?>
+<div class="outside_container form_shadow_top">
+ <span class='ajax_loadermainforedit' style='display:none'><img src='<?php echo $this->getSkinUrl('images/ajax_loader.gif')?>'/></span>
+
+     <table border="1" id="showcomment">
+      <tr colspan="2" id="title">
+         <td width="30%">Post Date</td>
+         <td width="64%">Comment</td>
+      </tr>
+      
+     <?php $i=1;foreach($orderfeedback as $orderfeedback1){ ?>
+     <tr colspan="2">
+         <td>
+          <?php  
+              $feed_date = $orderfeedback1['created_time'];
+              $dt = new DateTime($feed_date);
+              echo $dt->format('d-m-Y');
+          ?>
+         </td>
+         <td>
+             <div class="comment more">
+               <?php    echo $orderfeedback1['content'];?>   
+             </div>
+        </td>
+   </tr>
+
+    <?php if($orderfeedback1['adminfeedback']) {?>
+     <tr>
+         <td scope="rowgroup" colspan="2"><span><?php  echo $this->__("Admin Feedback");?></span>  <div class="comment more"><?php echo $orderfeedback1['adminfeedback']?></div></td>
+     </tr>
+    <?php }?> 
+     <?php $i++;} ?> 
+
+ </table>
+ 
+ <script type="text/javascript">
+ jQuery(document).ready(function() {
+    var showChar = 200;
+    var ellipsestext = "...";
+    var moretext = "more";
+    var lesstext = "less";
+    jQuery('.more').each(function() {
+        var content = jQuery(this).html();
+ 
+        if(content.length > showChar) {
+ 
+            var c = content.substr(0, showChar);
+            var h = content.substr(showChar-1, content.length - showChar);
+ 
+            var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+ 
+            jQuery(this).html(html);
+        }
+ 
+    });
+ 
+    jQuery(".morelink").click(function(){
+        if(jQuery(this).hasClass("less")) {
+            jQuery(this).removeClass("less");
+            jQuery(this).html(moretext);
+        } else {
+            jQuery(this).addClass("less");
+            jQuery(this).html(lesstext);
+        }
+        jQuery(this).parent().prev().toggle();
+        jQuery(this).prev().toggle();
+        return false;
+    });
+});
+ </script>
+ <style type="text/css">
+     .morecontent span {
+    display: none;
+}
+     
+ </style>
+<?php endif;?>

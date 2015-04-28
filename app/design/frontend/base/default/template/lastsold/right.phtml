@@ -1,0 +1,104 @@
+<?php 
+	$config = Mage::getStoreConfig('sales/sales'); // extension on/off?	
+	$getConfigValue = $config['enable']; 
+	$getProductConfigValue = $config['product_limit']; 
+	
+	if($getProductConfigValue > 0) { 
+	   $getProductConfigValueCount = $config['product_limit']; 
+	}else{
+	   $getProductConfigValueCount = 5; 
+	}
+	
+	if($getConfigValue==1){
+?>
+<script type="text/javascript">
+	jQuery.noConflict();
+	jQuery(document).ready(function(){
+	  jQuery('.bxslider').bxSlider();
+	});
+</script>
+<div class="block block-cart">
+	 <div class="block-title">
+		<strong>
+		   <span>Recently sold</span>
+		</strong>
+	 </div>
+<div class="block-content">
+<?php
+	$salesModel=Mage::getModel("sales/order");
+	$salesCollection = $salesModel->getCollection();
+	$data = array();
+
+	foreach($salesCollection as $order){
+		$orderId= $order->getId();
+		#load the order
+		$order = Mage::getModel('sales/order')->load($orderId);
+		#get all items
+		$items = $order->getAllItems();			
+		#displaying the array in order to see the products
+	    #loop for all order items
+		foreach ($items as $itemId => $item) {			
+			$itemData[] =  $item->getProductId();			
+		}
+    }
+  $finalData= array_unique($itemData);
+  
+  if(empty($orderId)) {
+  echo "No order placed yet!";
+  }else{ 
+  ?>
+   <ul class="bxslider">
+  <?php
+  $k=0;
+	foreach ($finalData as $ItemID) {
+  $k++;
+  
+  if($k<=$getProductConfigValueCount){
+  
+	    $_product = Mage::getModel('catalog/product')->load($ItemID);
+		$obj  =  new Mage_Catalog_Block_Product_List();
+?>
+     <li>  
+	    <div>   
+        <p class="img-center">		
+            <a class="product-image" href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>">
+                <img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(78); ?>" width="78" height="78" alt="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>" title="<?php echo $this->htmlEscape($this->getImageLabel($_product, 'small_image')) ?>" />
+            </a>
+            <h3 class="product-name a-center"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>"><?php echo $this->htmlEscape($_product->getName()) ?></a></h3>
+            <div class="cart-center">                        
+                <?php if($_product->getRatingSummary()): ?>
+                    <?php echo $this->getReviewsSummaryHtml($_product, 'short') ?>
+			    <?php endif; ?>
+                <?php echo $this->getPriceHtml($_product, true) ?>
+                <?php if($_product->isSaleable()): ?>
+                    <button class="button" onclick="setLocation('<?php echo $obj->getAddToCartUrl($_product) ?>')"><span><span><span><?php echo $this->__('Add to Cart') ?></span></span></span></button>
+                    <div class="clear"></div>
+                <?php else: ?>
+                    <p class="availability"><span class="out-of-stock"><?php echo $this->__('Out of stock') ?></span></p>
+                    <div class="clear"></div>
+                <?php endif; ?>
+                <ul class="add-to-links">
+                    <?php if ($this->helper('wishlist')->isAllow()) : ?>
+                    <p><a href="<?php echo $this->helper('wishlist')->getAddUrl($_product) ?>"><?php echo $this->__('Add to Wishlist') ?></a></p>
+                    <?php endif; ?>
+                    <?php if($_compareUrl=$this->getAddToCompareUrl($_product)): ?>
+                    <p class="last"><span class="separator">|</span> <a href="<?php echo $_compareUrl ?>"><?php echo $this->__('Add to Compare') ?></a></p>
+                    <?php endif; ?>
+                </ul>
+            </div>
+        </div>
+    </p>
+	</li>
+<?php
+	} 
+}	
+?>
+ </ul> 
+<?php
+	} 
+?>
+ </div>
+ </div>
+<?php
+	}		
+?>

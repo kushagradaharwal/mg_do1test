@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>lastorderedproducts</name>
+    <version>1.0.1</version>
+    <stability>devel</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">Open Software License (OSL)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>This is last sold product listing on home page.</summary>
+    <description>This is last sold product listing on home page sidebar.</description>
+    <notes>Test</notes>
+    <authors><author><name>Chandra</name><user>Chandra</user><email>c.kadam@gmail.com</email></author></authors>
+    <date>2014-06-03</date>
+    <time>14:29:07</time>
+    <contents><target name="magelocal"><dir name="Vinmage"><dir name="Lastsold"><dir name="Block"><file name="Index.php" hash="a7581001c207ab26f80c72d3c36d7894"/><file name="Right.php" hash="50cd26221739f2a62d0e21f9590c0508"/></dir><dir name="Helper"><file name="Data.php" hash="2ae795a7c9df84f503280bcdb4c1a150"/></dir><dir name="controllers"><file name="IndexController.php" hash="272d63fef916a134416836985c27483a"/></dir><dir name="etc"><file name="adminhtml.xml" hash="d36aae15c91c636541f5b1a2dad8be3d"/><file name="config.xml" hash="95ba5dbe0c2f685c5dd4ff36e7f8447c"/><file name="system.xml" hash="29bcad3ae0763572c52c051a689ddbb1"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Vinmage_Lastsold.xml" hash="2dbe97411c2864fac57e45258f2ebe02"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="lastsold.xml" hash="43ed8b34e5b97577b8cce86cba62c7eb"/></dir><dir name="template"><dir name="lastsold"><file name="index.phtml" hash="395b5512423d31a9526f94e3d7dcc13a"/><file name="left.phtml" hash="0285dc1e312060f0a98a9e3569f72cdd"/><file name="right.phtml" hash="a68da12ad4546a5df1ec9fa81911f971"/></dir></dir></dir></dir></dir></target><target name="mageskin"><dir name="frontend"><dir name="base"><dir name="default"><dir name="images"><file name="controls.png" hash="d9d25372f38c6b242b9b51d5841fe86e"/></dir><dir name="css"><file name="jquery.bxslider.css" hash="0d463876ed132da89e2dea96d09365fa"/></dir><dir name="js"><file name="jquery.bxslider.js" hash="b9f453c75a7e3bcbb017b519fbe300bb"/><file name="jquery1.8.min.js" hash="61551013be89774882ceee7d71cd8bdb"/></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php><package><name>Last_ordered</name><channel>community</channel><min>1.0.0</min><max>8.0.0</max></package></required></dependencies>
+</package>

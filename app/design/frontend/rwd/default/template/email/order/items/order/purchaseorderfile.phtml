@@ -1,0 +1,34 @@
+<?php
+/**
+ * Template for collectiing attach file
+ */
+?>
+<?php  
+$_order =$this->getOrder();
+
+$quote_id = $_order->getQuoteId();
+
+$collection = Mage::getModel('file/file')->getCollection();
+
+$collection->addFieldToFilter('quote_id',$quote_id);
+
+$flat_quote = Mage::getModel("sales/quote_payment")->getCollection()
+               ->addFieldToFilter("quote_id",$quote_id);
+ 
+$flatquote = array();
+ 
+foreach($flat_quote as $flat_quote_key)
+{
+  $flatquote[] = $flat_quote_key['method'];     
+}
+
+if($flatquote[0] == "purchaseorder")
+{ 
+foreach($collection as $object){
+?>
+<span class="payment_filetitle"><?php echo $this->__("Payment File"); ?></span>
+<br />
+<a target="_blank" href='<?php $url =  $this->getBaseUrl().'media/uploads'.$object['filename']; echo str_replace('index.php/', '', $url); ?>'><?php echo $object['filename'];?></a>	
+<?php } 
+}
+?>

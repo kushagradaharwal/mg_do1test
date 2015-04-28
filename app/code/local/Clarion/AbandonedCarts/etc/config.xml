@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category   Clarion
+ * @package    Clarion_AbandonedCarts
+ * @created    20th March 2015
+ * @author     Clarion magento team
+ * @purpose    Module configuration file 
+ */
+-->
+<config>
+    <modules>
+        <Clarion_AbandonedCarts>
+            <version>1.0.2</version>
+        </Clarion_AbandonedCarts>
+    </modules>
+    
+    <global>
+        <helpers>
+            <clarion_abandonedcarts>
+                <class>Clarion_AbandonedCarts_Helper</class>
+            </clarion_abandonedcarts>  
+        </helpers>
+        <blocks>
+            <clarion_abandonedcarts>
+                <class>Clarion_AbandonedCarts_Block</class>
+            </clarion_abandonedcarts>
+        </blocks>
+         <models>
+            <clarion_abandonedcarts>
+                <class>Clarion_AbandonedCarts_Model</class>
+                <resourceModel>abandonedcarts_resource</resourceModel>
+            </clarion_abandonedcarts>
+            <abandonedcarts_resource>
+                <class>Clarion_AbandonedCarts_Model_Resource</class>
+            </abandonedcarts_resource>
+        </models>
+    </global>
+    
+    <!-- Adminhtml layout xml configuration -->
+    <adminhtml>
+        <layout>
+            <updates>
+                <clarion_abandonedcarts>
+                    <file>clarion_abandonedcarts.xml</file>
+                </clarion_abandonedcarts>
+            </updates>
+        </layout>
+    </adminhtml>
+    
+    <!-- Admin router configuration-->
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <clarion_abandonedcarts after="Mage_Adminhtml">Clarion_AbandonedCarts_Adminhtml</clarion_abandonedcarts>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>

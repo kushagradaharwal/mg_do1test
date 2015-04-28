@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<config>
+	<tabs>
+		<ordersearch  module="ordersearch" translate="label">
+			<label>Advanced Ordersearch Extension</label>
+			<sort_order>600</sort_order>
+		</ordersearch>
+	</tabs>
+	<sections>
+		<ordersearch translate="label" module="ordersearch">
+			<label>Advanced Ordersearch configuration</label>
+			<tab>ordersearch</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>999</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+			   <salescol translate="label">
+				<label>OrderSearch Columns Settings</label>
+				<frontend_type>text</frontend_type>
+				<sort_order>1</sort_order>
+				<show_in_default>1</show_in_default>
+				<show_in_website>1</show_in_website>
+				<show_in_store>1</show_in_store>
+					<fields>
+						<gridcolumns translate="label, comment">
+							<label>OrderSearch Columns</label>
+							<comment>Select Reuired Columns</comment>
+							<frontend_type>multiselect</frontend_type>
+							<source_model>ordersearch/adminhtml_system_config_source_columnscollection</source_model>	
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</gridcolumns>
+					</fields>
+			 </salescol>	
+			</groups>
+		</ordersearch>
+	</sections>
+</config>	

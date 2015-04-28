@@ -1,0 +1,182 @@
+<?php 
+/*
+ * 
+ *Module order feedback 
+ * 
+ */
+?>
+<?php  
+ $fieldvalue = $this->helper("orderfeedback")->getFieldenabledisable();
+ $order = $this->getOrderid();     //get the current order      
+ $orderdet = Mage::getModel("sales/order")->load($order);
+ $orderfeedback = Mage::getModel('orderfeedback/orderfeedback')->getCollection()
+                 ->addFieldToFilter("orderid",$orderdet['increment_id']);
+ if($fieldvalue == 1) : 
+ ?>
+<form action="<?php echo $this->helper('orderfeedback')->getFormurl(); ?>" method="post" id="orderfeedback">
+<!-- BEGIN_ITEMS -->
+<fieldset>
+
+<label class="titlefeedback"><?php echo "Feedback For Order"?> <?php echo $orderdet['increment_id']; ?></label>
+
+
+<input type="hidden" name="orderid" class="input-text required-entry"  value="<?php echo $orderdet['increment_id']; ?>" />
+
+<input type="hidden" value="<?php echo $orderdet['customer_email'];?>" name="customeremail"/>
+
+
+<input type="hidden" name="created_time" value="<?php  echo date("Y/m/d");?>" />
+
+<input name="fullname"  type="hidden"   value="<?php  echo $orderdet['customer_firstname']."&nbsp;".$orderdet['customer_lastname'];?>" type="text" size="50" class="input-text required-entry"  > 
+
+<label  for="content"><b>*</b> Feedback</label>
+<textarea name="content"  class="input-text required-entry"  ></textarea>
+</div>
+
+<div class="clear"></div>
+<div class="q required"><b>*</b> Indicates Response Required
+</div>
+<div class="clear"></div>
+</div>
+<!-- END_ITEMS -->
+<input type="submit" title="<?php echo Mage::helper('orderfeedback')->__('Submit') ?>" class="button" value="<?php echo Mage::helper('contacts')->__('Submit') ?>">
+
+</fieldset>
+</form>
+
+<script type="text/javascript">
+    //<![CDATA[
+        var newsletterSubscriberFormDetail = new VarienForm('orderfeedback');
+    //]]>
+</script>
+    <?php
+    if(count($orderfeedback) >= 1) {  ?>
+  <div class="fieldset" style="padding:22px 25px 30px 33px !important;"> 
+  <h2 class="legend"><?php echo $this->__("Feedbacks Comments")?></h2>
+   <div id="results"></div>
+ <div class="geteditdata"></div>
+  <div class="editdiv"></div>
+ <!--pagination code-->
+  <?php  $pages = $this->getRecord(); //get page value this is the ciel function value
+  if($pages){
+  ?>
+ 
+   <?php
+   if(count($orderfeedback) > 5){?>
+  <!--pagination code-->
+  <?php
+    //create pagination code starts
+    if($pages > 1)
+    {
+            $pagination	= '';
+            $pagination	.= '<ul class="paginate" style="display:none;">';
+            for($i = 1; $i<=$pages; $i++)
+            {
+                   
+                $pagination .= '<li><a   class="paginate_click" id="'.$i.'-page">'.$i.'</a></li>';
+            }
+            $pagination .= '</ul>';
+    }
+    ?>
+   <span id='lodermessage_span' style="display: none;float: left;text-align: center;width: 100%;"><img src='<?php echo $this->getSkinUrl('images/ajax_loader.gif')?>'/></span>
+
+   <div id="results"></div>
+  
+   <?php   echo $pagination; ?>
+  </div>
+    <?php  } ?>
+   <script type="text/javascript">
+    jQuery("#lodermessage_span").show();
+    
+ jQuery(document).ready(function() {
+  jQuery("#results").load("<?php  echo $this->getUrl('orderfeedback/index/pagination');?>", {'page':0,orderid :"<?php echo $orderdet['increment_id']; ?>"}, function() {
+    jQuery("#1-page").addClass('active');
+    jQuery("#lodermessage_span").hide();
+    });
+    jQuery(".paginate").show();
+    jQuery(".paginate_click").click(function (e) {
+        
+         jQuery("#lodermessage_span").show();
+    
+    jQuery(".paginate_click").removeClass('active');
+    var clicked_id = jQuery(this).attr("id").split("-"); 
+    var page_num = parseInt(clicked_id[0]); 
+                       jQuery.ajax(
+                       {
+                           url: '<?php echo $this->getUrl('orderfeedback/index/pagination');?>',
+                           type: 'POST',   
+                           data:  {'page' : (page_num-1),orderid :"<?php echo $orderdet['increment_id']; ?>" },  
+                              success:function(data){
+                                    jQuery("#lodermessage_span").hide();
+                                    jQuery("#"+page_num+"-page").addClass('active');
+                                    jQuery("#results").html(data);
+                                    
+                              }
+                       });
+        
+    });
+    
+ });   
+ 
+ </script>
+ 
+ <?php } else { ?>
+ <?php
+$orderfeedback = $orderfeedback; //get current order feedback collection it collection is less then 3
+
+if($orderfeedback):
+?>
+<div class="outside_container form_shadow_top">
+  <div class="fieldset"> 
+  <h2 class="legend"><?php echo $this->__("Feedbacks Comments")?></h2>
+  
+    <span class='ajax_loadermainforedit' style='display:none'><img src='<?php echo $this->getSkinUrl('images/ajax_loader.gif')?>'/></span>
+
+     <table border="1" id="showcomment">
+      <tr colspan="2" id="title">
+         <td width="30%">Post Date</td>
+         <td width="64%">Comment</td>
+      </tr>
+      
+     <?php foreach($orderfeedback as $orderfeedback1){ ?>
+     <tr colspan="2">
+         <td>
+          <?php  
+              $feed_date = $orderfeedback1['created_time'];
+              $dt = new DateTime($feed_date);
+              echo $dt->format('d-m-Y');
+          ?>
+         </td>
+         <td><?php echo $orderfeedback1['content']?></td>
+
+     </tr>
+    
+    <?php if($orderfeedback1['adminfeedback']) {?>
+     <tr>
+         <td colspan="0"><span><?php  echo $this->__("Admin Feedback");?></span> <?php echo $orderfeedback1['adminfeedback']?></td>
+     </tr>
+    <?php }?> 
+     <?php } ?>
+ </table>
+ </div>
+</div>
+<?php endif;?>
+<?php 
+  }   
+  
+  } else{
+      ?>
+ <div class="form_table">
+
+<div class="clear"></div>
+
+<div id="q0" class="q full_width">
+<div class="segment_header" >
+    <h1 style="font-size:14px;">
+        <?php echo " Sorry , There Are No Comment For The Order ";?> <?php echo $orderdet['increment_id']; ?></h1></div>
+</div>
+<div class="clear"></div>
+
+ </div>
+  <?php } ?>
+  <?php  endif;?>

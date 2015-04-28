@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Download_Custom>
+            <version>0.1.0</version>
+        </Download_Custom>
+    </modules>
+
+     <frontend>
+         <routers>
+            <downloadable>
+                <args>
+                    <modules>
+                        <Download_Custom before="Mage_Downloadable">Download_Custom</Download_Custom>
+                    </modules>
+                </args>
+            </downloadable>
+        </routers>
+ 
+    </frontend>
+
+</config>

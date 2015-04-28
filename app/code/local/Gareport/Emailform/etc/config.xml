@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Gareport_Emailform>
+            <version>0.1.0</version>
+        </Gareport_Emailform>
+    </modules>
+    <frontend>
+        <routers>
+            <emailform>
+                <use>standard</use>
+                <args>
+                    <module>Gareport_Emailform</module>
+                    <frontName>consulting</frontName>
+                </args>
+            </emailform>
+        </routers>
+
+    </frontend>
+
+
+</config>

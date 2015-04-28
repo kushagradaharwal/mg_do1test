@@ -1,0 +1,35 @@
+<?php
+/**
+ * Template for collectiing attach file
+ */
+?>
+<?php
+  
+$_order = $this->getOrder();
+
+$quote_id = $_order->getQuoteId();
+
+$collection = Mage::getModel('file/file')->getCollection();
+
+$collection->addFieldToFilter('quote_id',$quote_id);
+
+$flat_quote = Mage::getModel("sales/quote_payment")->getCollection()
+               ->addFieldToFilter("quote_id",$quote_id);
+ 
+$flatquote = array();
+ 
+foreach($flat_quote as $flat_quote_key)
+{
+  $flatquote[] = $flat_quote_key['method'];     
+}
+
+if($flatquote[0] == "purchaseorder")
+{ 
+foreach($collection as $object){
+?>
+<span class="purchaseorder_text"><?php echo $this->__("Your Purchase Order will be reviewed before any products are delivered");?></span>
+<?php } 
+}
+?>
+	 
+ 

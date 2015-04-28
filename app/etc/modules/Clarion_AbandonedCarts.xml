@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Module configuration file
+ * @category    Clarion
+ * @package     Clarion_AbandonedCarts
+ * @author      Clarion Magento Team
+ */
+-->
+<config>
+    <modules>
+        <Clarion_AbandonedCarts>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Clarion_AbandonedCarts>
+    </modules>
+</config>

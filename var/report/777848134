@@ -1,0 +1,9 @@
+a:5:{i:0;s:359:"Error in file: "C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\local\Vilpjsc\Brand\sql\brand_setup\mysql4-upgrade-1.0.0-2.0.4.php" - SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' DROP COLUMN `filename`' at line 2";i:1;s:1074:"#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Resource\Setup.php(645): Mage::exception('Mage_Core', 'Error in file: ...')
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Resource\Setup.php(437): Mage_Core_Model_Resource_Setup->_modifyResourceDb('upgrade', '1.0.0', '2.0.4')
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Resource\Setup.php(320): Mage_Core_Model_Resource_Setup->_upgradeResourceDb('1.0.0', '2.0.4')
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Resource\Setup.php(235): Mage_Core_Model_Resource_Setup->applyUpdates()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(417): Mage_Core_Model_Resource_Setup::applyAllUpdates()
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(343): Mage_Core_Model_App->_initModules()
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#8 {main}";s:3:"url";s:75:"/magento-1.8.1.0/mg_do1test/index.php/admin/?SID=22qinj25uonvaq7vq1fpoiuhc1";s:11:"script_name";s:37:"/magento-1.8.1.0/mg_do1test/index.php";s:4:"skin";s:7:"default";}

@@ -1,0 +1,92 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2011 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<ul class="form-list" id="payment_form_<?php echo $this->getMethodCode() ?>" style="display:none;">
+    <li>
+        <label for="po_number" class="required"><em>*</em><?php echo $this->__('Purchase Order Number') ?></label>
+        <div class="input-box">
+            <input type="text" id="po_number" name="payment[po_number]" title="<?php echo $this->__('Purchase Order Number') ?>" class="input-text required-entry" value="<?php echo $this->htmlEscape($this->getInfoData('po_number')) ?>" />
+        </div>
+    </li>
+    <li>
+    	 <label for="po_number" class="required"><em>*</em>				
+		<span class="documentstext"><?php echo $this->__("Only PDF and Word documents are acceptable&nbsp;&nbsp;&nbsp;");?></span>
+		<span id='file_upload_text2'></</span></label>
+    	<div class="input-box">
+    		<input id="file_upload2" type="file" name="file_upload" />
+    	</div>
+        
+    	<input id="file_upload_path2" type="hidden" name="file_upload_path" class='required-entry'  />
+		<input type="hidden" value='payment_file' name="file_upload_type" class='required-entry'  />
+		<input type="hidden" id="checkforvalifation"/>
+		</li>
+</ul>
+<script type="text/javascript">
+// <![CDATA[
+	jQuery('#file_upload2').uploadify({
+    'uploader'  : '<?php echo $this->getSkinUrl('uploadify/uploadify.swf') ?>',
+    'cancelImg' : '<?php echo $this->getSkinUrl('uploadify/cancel.png') ?>',
+    'script'    : '<?php echo $this->getUrl('file/index/upload') ?>',
+    'auto'       : true,
+    'fileDataName' : 'file',
+    'onComplete' : function(event, ID, fileObj, response, data){
+    	jQuery('#file_upload_path2').val(response);
+    	jQuery('#file_upload_text2').html('File Uploaded: '+fileObj.name);
+		//alert(fileObj.name);
+		var sttr1= fileObj.name;
+		//alert(sttr1.search('docx'));
+		var checkstr = sttr1.search('docx');
+		var checkstrPDF = sttr1.search('PDF');
+		var checkstrpdf = sttr1.search('pdf');
+		var checkstrdoc = sttr1.search('doc');
+		
+		
+		if(checkstr == "-1" && checkstrPDF == "-1" &&  checkstrpdf == "-1" && checkstrdoc == "-1" )
+		{
+		jQuery("#checkforvalifation").addClass("required-entry");
+		jQuery(".documentstext").show();
+		jQuery(".documentstext").css({"color": "red", "font-size": "13px", "margin": "5px 0 0"});
+		
+		//jQuery("#file_upload_text2").hide();
+
+		}
+		
+		else
+		{
+		jQuery("#checkforvalifation").removeClass("required-entry");
+		jQuery(".documentstext").show();
+		jQuery(".documentstext").css({"color": "#000", "font-size": "13px", "margin": "5px 0 0"});
+		jQuery("#file_upload_text2").show();
+		jQuery(".validation-advice").hide();
+		return true;  
+		}
+     }
+    
+  });
+// ]]>
+</script>
+<style>
+</style>

@@ -1,0 +1,44 @@
+<?php 
+
+    $currentorder =   $_POST["entity"];
+
+    $order = $this->getOrderid();   
+
+    $orderdet = Mage::getModel("sales/order")->load($order);
+
+   $orderfeedback = Mage::getModel('orderfeedback/orderfeedback')->load($order);
+ 
+?>
+<form action="<?php echo $this->getUrl("orderfeedback/index/submit"); ?>" method="post" id="orderfeedback">
+<!-- BEGIN_ITEMS -->
+<input type="hidden" name="order_hiddenid" value="<?php echo  $orderfeedback['orderfeedback_id'];?>" />
+<div class="outside_container form_shadow_top">
+<div class="form_shadow_top_left"><div class="form_shadow_top_right"><div class="form_shadow_top_middle"></div></div></div>
+</div> 
+<div class="form_table">
+<div class="clear"></div>
+<div id="q0" class="q full_width">
+<div class="clear"></div>
+<div id="q1" class="q required">
+<label class="question top_question" for="RESULT_TextField-1"><b>*</b> Order Id:</label>
+<input type="text" name="orderid" class="input-text required-entry"  size="22" value="<?php echo $orderfeedback['orderid']; ?>" />
+</div>
+<div class="clear"></div>
+<input type="hidden" name="created_time" value="<?php  echo Mage::helper('orderfeedback')->correctdate(date("Y/m/d"));?>" />
+<div class="clear"></div>
+<div class="clear"></div>
+<div id="q11" class="q required">
+    <label class="question top_question" for="RESULT_TextField-10"><b>*</b> Feedback</label>
+    <textarea name="content" value="<?php echo $orderfeedback["content"];?>" rows="10" cols="50" class="input-text required-entry"  ><?php echo $orderfeedback["content"];?></textarea>
+</div>
+<div class="clear"></div>
+<div class="q required"><b>*</b> Indicates Response Required
+</div>
+<div class="clear"></div>
+</div>
+<!-- END_ITEMS -->
+<div class="outside_container">
+<div class="buttons_reverse">
+<button type="submit" title="<?php echo Mage::helper('orderfeedback')->__('Submit') ?>" class="button"><span><span><?php echo Mage::helper('contacts')->__('Submit') ?></span></span></button>
+</div>
+</div>

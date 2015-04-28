@@ -1,0 +1,5 @@
+<?php
+class Ebs_Inline_Block_Adminhtml_Widget_Grid_Column_Renderer_Input extends Mage_Adminhtml_Block_Widget_Grid_Column_Renderer_Input
+{
+}
+			

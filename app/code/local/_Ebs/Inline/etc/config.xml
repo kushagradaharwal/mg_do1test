@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Ebs_Inline>
+      <version>0.1.0</version>
+    </Ebs_Inline>
+  </modules>  
+  <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Ebs_Inline before="Mage_Adminhtml">Ebs_Inline</Ebs_Inline>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+  </admin>	
+  <global>
+    <helpers>
+      <inline>
+        <class>Ebs_Inline_Helper</class>
+      </inline>
+    </helpers>
+	<blocks>
+	  <inline>
+		<class>Ebs_Inline_Block</class>
+	  </inline>					
+	</blocks>
+  </global>
+</config> 

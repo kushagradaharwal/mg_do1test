@@ -1,0 +1,57 @@
+<!--
+{
+"var data.sender_name":"Sender Name",
+"var data.sender_email":"Sender Email",
+"var data.email_subject":"Subject",
+"var data.receive_name":"Name",
+"var data.message":"Message",
+"var data.storename":"Store Name",
+"var data.adminfeedback":"Adminfeedback Name",
+"var data.logo_url":"Logo Url",
+"var data.store_name":"Store Name",
+}
+-->
+<!--styles
+body,td {   background: #fff;
+    color: #666;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px; }
+@-->
+
+<body>
+
+<table width="600" border="0" cellspacing="0" cellpadding="0" align="center" style="margin-top: 20px;">
+   <tr>
+    <td colspan="2" align="center" style="border-bottom: 4px solid #f1e8c9; width: 598px; height: 100px; padding: 0px; margin: 0px;">
+        <a href="{{store url}}" target="_blank"><img src="{{var logo_url}}" style="margin-bottom:10px;" border="0"/></a>
+    
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding: 10px 0px 40px 0px;">
+        <h1 style="padding: 5px 0px 10px 0px; margin: 0px; font: bold 24px Arial, Helvetica, sans-serif;">Hello {{var receive_name}}</h1>
+        <p style="padding: 5px 0px; margin: 0px; font: normal 12px/18px Arial, Helvetica, sans-serif;">{{var message}}</p>
+    <p style="padding: 5px 0px; margin: 0px; font: normal 12px/18px Arial, Helvetica, sans-serif;">Thank You! For Your Feedback<br />
+   </p>
+    </td>
+  </tr>
+  
+  
+  <tr>
+    <td colspan="2" style="padding: 10px 0px 40px 0px;">
+        <h1 style="padding: 5px 0px 10px 0px; margin: 0px; font: bold 24px Arial, Helvetica, sans-serif;">Administrator Feedback</h1>
+        <p style="padding: 5px 0px; margin: 0px; font: normal 12px/18px Arial, Helvetica, sans-serif;">{{var adminfeedback}}</p>
+   </td>
+  </tr>
+  
+  <tr>
+    <td style="border-top: 2px solid #ededed; padding-top: 5px;"><p style="padding: 5px 0px; margin: 0px; font: normal 11px/18px Arial, Helvetica, sans-serif; text-align: center;"></p></td>
+    <td style="border-top: 2px solid #ededed; padding-top: 5px;" align="right"><p style="padding: 5px 0px; margin: 0px; font: normal 11px/18px Arial, Helvetica, sans-serif; text-align: center;">
+
+   Thank you, {{var store_name}} 
+
+   </p></td>
+  </tr>
+</table>
+</body>

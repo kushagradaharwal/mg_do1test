@@ -1,0 +1,39 @@
+<?php 
+$order =$_GET['order']; // get order details
+$orderdet = Mage::getModel("sales/order")->load($order);
+
+$orderfeedback = Mage::getModel('orderfeedback/orderfeedback')->getCollection()
+                 ->addFieldToFilter("orderid",$orderdet['increment_id']);
+$fieldvalue = $this->helper("orderfeedback")->getFieldenabledisable();
+?>
+<form action="<?php echo $this->helper('orderfeedback')->getOrderViewTabFormurl(); ?>" method="post" id="orderfeedback">
+<!-- BEGIN_ITEMS -->
+<fieldset>
+<input type="hidden" name="ordercoreid" value="<?php echo $order;?>"/>
+<label class="titlefeedback"><?php echo "Feedback For Order"?> <?php echo $orderdet['increment_id']; ?></label>
+<!--<label for="orderid"><b>*</b> Order Id:</label>-->
+<input type="hidden" name="orderid" value="<?php echo $orderdet['increment_id']; ?>" />
+<!--<label  for="fullname">Fullname</label>-->
+<input type="hidden" name="fullname"   value="<?php echo $orderdet['customer_firstname']."&nbsp;".$orderdet['customer_lastname'];?>" type="text" size="50" class="input-text required-entry"  > 
+<input type="hidden" name="created_time" value="<?php  echo date("Y/m/d");?>" />
+<label for="content"><b>*</b> Feedback</label>
+<textarea name="content"  class="input-text required-entry"  ></textarea>
+<input type="hidden" value="<?php echo $orderdet['customer_email'];?>" name="customeremail"/>
+<div class="clear"></div>
+<div class="q required"><b>*</b> Indicates Response Required
+</div>
+
+
+<!-- END_ITEMS -->
+
+
+<input type="submit" title="<?php echo Mage::helper('orderfeedback')->__('Submit') ?>" value="<?php echo Mage::helper('contacts')->__('Submit') ?>" class="button">
+
+
+</fieldset>
+</form>
+<script type="text/javascript">
+//<![CDATA[
+var newsletterSubscriberFormDetail = new VarienForm('orderfeedback');
+//]]>
+</script>

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>   
+<layout version="0.1.0"> 
+	<default>
+	<reference name="head">	
+		<action method="addCss"><stylesheet>css/jquery.bxslider.css</stylesheet></action>
+		<action method="addItem"><type>skin_js</type><name>js/jquery1.8.min.js</name></action>
+		<action method="addItem"><type>skin_js</type><name>js/jquery.bxslider.js</name></action> <!-- adds a js at the skin/ directories in the same manner as the above addCss directive -->
+	</reference>	
+	<reference name="right">
+	    <block type="lastsold/right" name="right.lastsold" template="lastsold/right.phtml"/>
+	</reference>	
+	</default>
+</layout>   
+	

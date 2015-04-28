@@ -1,0 +1,59 @@
+<?php
+/**
+ * Template for collectiing attach file
+ */
+?>
+<?php  
+$_order = $this->getOrder();
+
+$quote_id = $_order->getQuoteId();
+
+$collection = Mage::getModel('file/file')->getCollection();
+
+$collection->addFieldToFilter('quote_id',$quote_id);
+
+$flat_quote = Mage::getModel("sales/quote_payment")->getCollection()
+               ->addFieldToFilter("quote_id",$quote_id);
+ 
+$flatquote = array();
+ 
+foreach($flat_quote as $flat_quote_key)
+{
+  $flatquote[] = $flat_quote_key['method'];     
+}
+
+if($flatquote[0] == "purchaseorder")
+{ 
+foreach($collection as $object){
+?>
+<span class="payment_filetitle"><?php echo $this->__("Payment File"); ?></span>
+<br />
+<?php 
+ $media_url = str_replace('index.php/', '', $this->getBaseUrl())."media/";
+ $file_ext =  $object['filename'];
+ $check = strstr($file_ext,".doc");
+ $checkdocx = strstr($file_ext,".docx");
+ $checkPdf = strstr($file_ext,".PDF");
+ $checkpdf = strstr($file_ext,".pdf");
+ 
+ if($check)
+ {?>
+ <a target="_blank" href='<?php $url =  $this->getBaseUrl().'media/uploads'.$object['filename']; echo str_replace('index.php/', '', $url); ?>'><img src="<?php echo $media_url."po/wordicon.png";?>" title="<?php echo $object['filename'];?>" /></a>	
+ <?php }
+ elseif($checkdocx)
+ {?>
+ <a target="_blank" href='<?php $url =  $this->getBaseUrl().'media/uploads'.$object['filename']; echo str_replace('index.php/', '', $url); ?>'><img src="<?php echo $media_url."po/wordicon.png";?>" title="<?php echo $object['filename'];?>" /></a>	
+ <?php }
+ elseif($checkPdf)
+ {?>
+ <a target="_blank" href='<?php $url =  $this->getBaseUrl().'media/uploads'.$object['filename']; echo str_replace('index.php/', '', $url); ?>'><img src="<?php echo $media_url."po/pdficon.jpg";?> title="<?php echo $object['filename'];?>" /></a>	
+ <?php }
+ else
+ {?>
+ <a target="_blank" href='<?php $url =  $this->getBaseUrl().'media/uploads'.$object['filename']; echo str_replace('index.php/', '', $url); ?>'><img src="<?php echo $media_url."po/pdficon.jpg";?>" title="<?php echo $object['filename'];?>" /></a>	
+ <?php}
+ ?>
+<?php } 
+}
+}
+?>

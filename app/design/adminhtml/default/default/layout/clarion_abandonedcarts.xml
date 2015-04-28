@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * @category   design
+ * @package    default_default
+ * @created    20th March, 2015
+ * @author     Clarion magento team
+ * @purpose    Abandoned Carts admin layout file 
+ */
+-->
+<layout version="0.1.0">
+    <adminhtml_abandonedcarts_index>
+        <reference name="content">
+             <block type="clarion_abandonedcarts/adminhtml_abandonedcarts" name="abandonedcarts.grid.container" />
+        </reference>
+    </adminhtml_abandonedcarts_index>
+</layout>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category   Clarion
+ * @package    Clarion_AbandonedCarts
+ * @created    20th March, 2015
+ * @author     Clarion magento team 
+ * @purpose    Configuration file for admin menu and access permission
+ */
+-->
+<config>
+    <!-- Abandoned Carts Menu -->
+    <menu>
+        <sales>
+            <children>
+                <clarion_abandonedcarts translate="title" module="clarion_abandonedcarts">
+                    <title>Abandoned Carts</title>
+                    <sort_order>11</sort_order> 
+                    <action>adminhtml/abandonedcarts</action>
+                </clarion_abandonedcarts>
+            </children>
+        </sales>
+    </menu>
+</config>

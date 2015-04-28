@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Gareport_Emailform>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Gareport_Emailform>
+    </modules>
+</config> 

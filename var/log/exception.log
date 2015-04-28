@@ -1,0 +1,907 @@
+2014-07-07T14:40:47+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Mail\Transport\Sendmail.php:137
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Mail\Transport\Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template.php(454): Zend_Mail->send()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template.php(506): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template\Mailer.php(79): Mage_Core_Model_Email_Template->sendTransactional('sales_email_ord...', 'sales', Array, Array, Array, '1')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1340): Mage_Core_Model_Email_Template_Mailer->send()
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#9 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#10 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#11 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#12 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#13 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#14 {main}
+2014-07-07T15:10:42+00:00 ERR (3): 
+exception 'Exception' with message 'Notice: Use of undefined constant asss - assumed 'asss'  in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\design\frontend\rwd\default\template\catalog\product\view\sharing.phtml on line 33' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\design\frontend\rwd\default\template\catalog\product\view\sharing.phtml(33): mageCoreErrorHandler(8, 'Use of undefine...', 'C:\wamp\www\mag...', 33, Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Block\Template.php(241): include('C:\wamp\www\mag...')
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Block\Template.php(272): Mage_Core_Block_Template->fetchView('frontend\rwd\de...')
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Block\Template.php(286): Mage_Core_Block_Template->renderView()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Block\Abstract.php(919): Mage_Core_Block_Template->_toHtml()
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Block\Abstract.php(637): Mage_Core_Block_Abstract->toHtml()
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Block\Abstract.php(581): Mage_Core_Block_Abstract->_getChildHtml('sharing', true)
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\design\frontend\rwd\default\template\catalog\product\view.phtml(104): Mage_Core_Block_Abstract->getChildHtml('sharing')
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Block\Template.php(241): include('C:\wamp\www\mag...')
+#9 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Block\Template.php(272): Mage_Core_Block_Template->fetchView('frontend\rwd\de...')
+#10 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Block\Template.php(286): Mage_Core_Block_Template->renderView()
+#11 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Block\Abstract.php(919): Mage_Core_Block_Template->_toHtml()
+#12 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Block\Text\List.php(43): Mage_Core_Block_Abstract->toHtml()
+#13 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Block\Abstract.php(919): Mage_Core_Block_Text_List->_toHtml()
+#14 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Block\Abstract.php(637): Mage_Core_Block_Abstract->toHtml()
+#15 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Block\Abstract.php(581): Mage_Core_Block_Abstract->_getChildHtml('content', true)
+#16 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\design\frontend\rwd\default\template\page\1column.phtml(55): Mage_Core_Block_Abstract->getChildHtml('content')
+#17 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Block\Template.php(241): include('C:\wamp\www\mag...')
+#18 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Block\Template.php(272): Mage_Core_Block_Template->fetchView('frontend\rwd\de...')
+#19 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Block\Template.php(286): Mage_Core_Block_Template->renderView()
+#20 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Block\Abstract.php(919): Mage_Core_Block_Template->_toHtml()
+#21 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Layout.php(555): Mage_Core_Block_Abstract->toHtml()
+#22 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(390): Mage_Core_Model_Layout->getOutput()
+#23 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Catalog\Helper\Product\View.php(147): Mage_Core_Controller_Varien_Action->renderLayout()
+#24 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Catalog\controllers\ProductController.php(132): Mage_Catalog_Helper_Product_View->prepareAndRender(53, Object(Mage_Catalog_ProductController), Object(Varien_Object))
+#25 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Catalog_ProductController->viewAction()
+#26 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('view')
+#27 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#28 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#29 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#30 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#31 {main}
+2014-07-08T09:05:58+00:00 ERR (3): 
+exception 'Mage_Core_Exception' with message 'Invalid block type: Hwg_Attributemanager_Block_Edit_Form' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php:595
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Layout.php(495): Mage::throwException('Invalid block t...')
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('attributemanage...', Array)
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\local\Hwg\Attributemanager\Block\Adminhtml\Address\Edit.php(6): Mage_Core_Model_Layout->createBlock('attributemanage...')
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Block\Abstract.php(293): Hwg_Attributemanager_Block_Adminhtml_Address_Edit->_prepareLayout()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Layout.php(456): Mage_Core_Block_Abstract->setLayout(Object(Mage_Core_Model_Layout))
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\local\Hwg\Attributemanager\controllers\Adminhtml\AddressController.php(57): Mage_Core_Model_Layout->createBlock('attributemanage...')
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Hwg_Attributemanager_Adminhtml_AddressController->editAction()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('edit')
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#9 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#10 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#11 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#12 {main}
+2014-07-08T09:07:08+00:00 ERR (3): 
+exception 'Mage_Core_Exception' with message 'Invalid block type: Hwg_Attributemanager_Block_Edit_Form' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php:595
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Layout.php(495): Mage::throwException('Invalid block t...')
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Layout.php(437): Mage_Core_Model_Layout->_getBlockInstance('attributemanage...', Array)
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\local\Hwg\Attributemanager\Block\Adminhtml\Address\Edit.php(6): Mage_Core_Model_Layout->createBlock('attributemanage...')
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Block\Abstract.php(293): Hwg_Attributemanager_Block_Adminhtml_Address_Edit->_prepareLayout()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Layout.php(456): Mage_Core_Block_Abstract->setLayout(Object(Mage_Core_Model_Layout))
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\local\Hwg\Attributemanager\controllers\Adminhtml\AddressController.php(57): Mage_Core_Model_Layout->createBlock('attributemanage...')
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Hwg_Attributemanager_Adminhtml_AddressController->editAction()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('edit')
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#9 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#10 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#11 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#12 {main}
+2015-02-17T14:09:54+00:00 ERR (3): 
+exception 'Exception' with message 'Recoverable Error: Object of class Mage_Payment_Block_Info_Checkmo could not be converted to string  in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php on line 1291' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1291): mageCoreErrorHandler(4096, 'Object of class...', 'C:\wamp\www\mag...', 1291, Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#9 {main}
+2015-02-17T14:11:51+00:00 ERR (3): 
+exception 'Exception' with message 'Recoverable Error: Object of class Mage_Payment_Block_Info_Checkmo could not be converted to string  in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php on line 1288' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1288): mageCoreErrorHandler(4096, 'Object of class...', 'C:\wamp\www\mag...', 1288, Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#9 {main}
+2015-02-17T14:43:53+00:00 ERR (3): 
+exception 'Exception' with message 'Quote totals must be collected before this operation.' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Quote.php:1861
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Service\Quote.php(326): Mage_Sales_Model_Quote->prepareRecurringPaymentProfiles()
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Service\Quote.php(223): Mage_Sales_Model_Service_Quote->_submitRecurringPaymentProfiles()
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Service\Quote.php(238): Mage_Sales_Model_Service_Quote->submitNominalItems()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(785): Mage_Sales_Model_Service_Quote->submitAll()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#9 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#10 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#11 {main}
+2015-02-17T15:06:58+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Mail\Transport\Sendmail.php:137
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Mail\Transport\Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template.php(454): Zend_Mail->send()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template.php(506): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template\Mailer.php(79): Mage_Core_Model_Email_Template->sendTransactional('1', 'sales', Array, Array, Array, '1')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1340): Mage_Core_Model_Email_Template_Mailer->send()
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#9 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#10 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#11 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#12 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#13 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#14 {main}
+2015-02-17T15:07:03+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Mail\Transport\Sendmail.php:137
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Mail\Transport\Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template.php(454): Zend_Mail->send()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template.php(506): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template\Mailer.php(79): Mage_Core_Model_Email_Template->sendTransactional('1', 'sales', Array, Array, Array, '1')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1340): Mage_Core_Model_Email_Template_Mailer->send()
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#9 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#10 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#11 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#12 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#13 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#14 {main}
+2015-02-17T16:41:28+00:00 ERR (3): 
+exception 'Exception' with message 'Recoverable Error: Object of class Mage_Customer_Model_Customer could not be converted to string  in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php on line 1313' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1313): mageCoreErrorHandler(4096, 'Object of class...', 'C:\wamp\www\mag...', 1313, Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#9 {main}
+2015-02-17T16:43:23+00:00 ERR (3): 
+exception 'Exception' with message 'Recoverable Error: Object of class Mage_Customer_Model_Customer could not be converted to string  in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php on line 1313' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1313): mageCoreErrorHandler(4096, 'Object of class...', 'C:\wamp\www\mag...', 1313, Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#9 {main}
+2015-02-17T16:46:53+00:00 ERR (3): 
+exception 'Exception' with message 'Recoverable Error: Object of class Mage_Customer_Model_Customer could not be converted to string  in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php on line 1313' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1313): mageCoreErrorHandler(4096, 'Object of class...', 'C:\wamp\www\mag...', 1313, Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#9 {main}
+2015-02-17T16:49:09+00:00 ERR (3): 
+exception 'Exception' with message 'Recoverable Error: Object of class Mage_Customer_Model_Customer could not be converted to string  in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php on line 1313' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1313): mageCoreErrorHandler(4096, 'Object of class...', 'C:\wamp\www\mag...', 1313, Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#9 {main}
+2015-02-17T16:50:42+00:00 ERR (3): 
+exception 'Exception' with message 'Recoverable Error: Object of class Mage_Customer_Model_Customer could not be converted to string  in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php on line 1313' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1313): mageCoreErrorHandler(4096, 'Object of class...', 'C:\wamp\www\mag...', 1313, Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#9 {main}
+2015-02-17T16:56:14+00:00 ERR (3): 
+exception 'Exception' with message 'Recoverable Error: Object of class Mage_Customer_Model_Customer could not be converted to string  in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php on line 1313' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1313): mageCoreErrorHandler(4096, 'Object of class...', 'C:\wamp\www\mag...', 1313, Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#9 {main}
+2015-02-17T16:58:02+00:00 ERR (3): 
+exception 'Exception' with message 'Recoverable Error: Object of class Mage_Customer_Model_Customer could not be converted to string  in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php on line 1313' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1313): mageCoreErrorHandler(4096, 'Object of class...', 'C:\wamp\www\mag...', 1313, Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#9 {main}
+2015-02-17T17:02:49+00:00 ERR (3): 
+exception 'Exception' with message 'Notice: Undefined variable: admineemail  in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php on line 1318' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1318): mageCoreErrorHandler(8, 'Undefined varia...', 'C:\wamp\www\mag...', 1318, Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#9 {main}
+2015-02-17T17:04:43+00:00 ERR (3): 
+exception 'Exception' with message 'Notice: Undefined variable: admineemail  in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php on line 1318' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1318): mageCoreErrorHandler(8, 'Undefined varia...', 'C:\wamp\www\mag...', 1318, Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#9 {main}
+2015-02-17T17:13:17+00:00 ERR (3): 
+exception 'Exception' with message 'Notice: Undefined variable: admineemail  in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php on line 1320' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1320): mageCoreErrorHandler(8, 'Undefined varia...', 'C:\wamp\www\mag...', 1320, Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#9 {main}
+2015-02-18T07:53:50+00:00 ERR (3): 
+exception 'Exception' with message 'Notice: Undefined variable: media_file  in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php on line 1380' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1380): mageCoreErrorHandler(8, 'Undefined varia...', 'C:\wamp\www\mag...', 1380, Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#9 {main}
+2015-02-18T07:56:08+00:00 ERR (3): 
+exception 'Exception' with message 'Notice: Undefined variable: media_file  in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php on line 1380' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1380): mageCoreErrorHandler(8, 'Undefined varia...', 'C:\wamp\www\mag...', 1380, Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#9 {main}
+2015-02-18T08:04:02+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Mail\Transport\Sendmail.php:137
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Mail\Transport\Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template.php(482): Zend_Mail->send()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template.php(534): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template\Mailer.php(89): Mage_Core_Model_Email_Template->sendTransactional(2, 'sales', Array, Array, Array, '1')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1401): Mage_Core_Model_Email_Template_Mailer->send()
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#9 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#10 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#11 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#12 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#13 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#14 {main}
+2015-02-18T10:24:01+00:00 ERR (3): 
+exception 'Exception' with message 'Notice: Undefined variable: content  in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php on line 1413' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1413): mageCoreErrorHandler(8, 'Undefined varia...', 'C:\wamp\www\mag...', 1413, Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#9 {main}
+2015-02-18T10:50:37+00:00 ERR (3): 
+exception 'Exception' with message 'Notice: Undefined variable: fromName  in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php on line 1416' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1416): mageCoreErrorHandler(8, 'Undefined varia...', 'C:\wamp\www\mag...', 1416, Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#9 {main}
+2015-02-18T11:03:28+00:00 ERR (3): 
+exception 'Exception' with message 'Notice: Undefined variable: file_name  in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template\Mailer.php on line 198' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template\Mailer.php(198): mageCoreErrorHandler(8, 'Undefined varia...', 'C:\wamp\www\mag...', 198, Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1400): Mage_Core_Model_Email_Template_Mailer->attach()
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#9 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#10 {main}
+2015-02-18T11:40:55+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Mail\Transport\Sendmail.php:137
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Mail\Transport\Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template.php(482): Zend_Mail->send()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template.php(534): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template\Mailer.php(104): Mage_Core_Model_Email_Template->sendTransactional('3', 'sales', Array, Array, Array, '1')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1340): Mage_Core_Model_Email_Template_Mailer->send()
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#9 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#10 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#11 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#12 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#13 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#14 {main}
+2015-02-18T11:41:15+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Mail\Transport\Sendmail.php:137
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Mail\Transport\Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template.php(482): Zend_Mail->send()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template.php(534): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template\Mailer.php(104): Mage_Core_Model_Email_Template->sendTransactional('3', 'sales', Array, Array, Array, '1')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1340): Mage_Core_Model_Email_Template_Mailer->send()
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#9 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#10 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#11 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#12 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#13 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#14 {main}
+2015-02-18T14:49:35+00:00 ERR (3): 
+exception 'Varien_Exception' with message 'Invalid method Mage_Core_Model_Email_Template::addEmailInfo(Array
+(
+    [0] => Mage_Core_Model_Email_Info Object
+        (
+            [_bccNames:protected] => Array
+                (
+                )
+
+            [_bccEmails:protected] => Array
+                (
+                )
+
+            [_toNames:protected] => Array
+                (
+                    [0] => ram
+                )
+
+            [_toEmails:protected] => Array
+                (
+                    [0] => kushagra.daharwal@hotmail.com
+                )
+
+            [_data:protected] => Array
+                (
+                )
+
+            [_hasDataChanges:protected] => 
+            [_origData:protected] => 
+            [_idFieldName:protected] => 
+            [_isDeleted:protected] => 
+            [_oldFieldsMap:protected] => Array
+                (
+                )
+
+            [_syncFieldsMap:protected] => Array
+                (
+                )
+
+        )
+
+)
+)' in C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Varien\Object.php:653
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1380): Varien_Object->__call('addEmailInfo', Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1380): Mage_Core_Model_Email_Template->addEmailInfo(Object(Mage_Core_Model_Email_Info))
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#9 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#10 {main}
+2015-02-18T14:58:58+00:00 ERR (3): 
+exception 'Varien_Exception' with message 'Invalid method Mage_Core_Model_Email_Template::addEmailInfo(Array
+(
+    [0] => Mage_Core_Model_Email_Info Object
+        (
+            [_bccNames:protected] => Array
+                (
+                )
+
+            [_bccEmails:protected] => Array
+                (
+                )
+
+            [_toNames:protected] => Array
+                (
+                    [0] => ram
+                )
+
+            [_toEmails:protected] => Array
+                (
+                    [0] => kushagra.daharwal@hotmail.com
+                )
+
+            [_data:protected] => Array
+                (
+                )
+
+            [_hasDataChanges:protected] => 
+            [_origData:protected] => 
+            [_idFieldName:protected] => 
+            [_isDeleted:protected] => 
+            [_oldFieldsMap:protected] => Array
+                (
+                )
+
+            [_syncFieldsMap:protected] => Array
+                (
+                )
+
+        )
+
+)
+)' in C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Varien\Object.php:653
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1380): Varien_Object->__call('addEmailInfo', Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1380): Mage_Core_Model_Email_Template->addEmailInfo(Object(Mage_Core_Model_Email_Info))
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#9 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#10 {main}
+2015-02-18T15:09:14+00:00 ERR (3): 
+exception 'Varien_Exception' with message 'Invalid method Mage_Core_Model_Email_Template::addEmailInfo(Array
+(
+    [0] => Mage_Core_Model_Email_Info Object
+        (
+            [_bccNames:protected] => Array
+                (
+                )
+
+            [_bccEmails:protected] => Array
+                (
+                )
+
+            [_toNames:protected] => Array
+                (
+                    [0] => ram
+                )
+
+            [_toEmails:protected] => Array
+                (
+                    [0] => kushagra.daharwal@hotmail.com
+                )
+
+            [_data:protected] => Array
+                (
+                )
+
+            [_hasDataChanges:protected] => 
+            [_origData:protected] => 
+            [_idFieldName:protected] => 
+            [_isDeleted:protected] => 
+            [_oldFieldsMap:protected] => Array
+                (
+                )
+
+            [_syncFieldsMap:protected] => Array
+                (
+                )
+
+        )
+
+)
+)' in C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Varien\Object.php:653
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1380): Varien_Object->__call('addEmailInfo', Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1380): Mage_Core_Model_Email_Template->addEmailInfo(Object(Mage_Core_Model_Email_Info))
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#9 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#10 {main}
+2015-02-18T15:44:58+00:00 ERR (3): 
+exception 'Exception' with message 'Warning: Cannot use a scalar value as an array  in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template.php on line 532' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template.php(532): mageCoreErrorHandler(2, 'Cannot use a sc...', 'C:\wamp\www\mag...', 532, Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1384): Mage_Core_Model_Email_Template->sendTransactional(2, Array, 'kushagra.daharw...', 'BEM', 1)
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#9 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#10 {main}
+2015-02-18T16:14:38+00:00 ERR (3): 
+exception 'Exception' with message 'Warning: file_get_contents(http://localhost/magento-1.8.1.0/mg_do1test/index.php/media/uploads/d/r/drupaltrainingplanformagentoteam.docx): failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
+  in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php on line 1399' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 [internal function]: mageCoreErrorHandler(2, 'file_get_conten...', 'C:\wamp\www\mag...', 1399, Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1399): file_get_contents('http://localhos...')
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#9 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#10 {main}
+2015-02-19T09:07:46+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Mail\Transport\Sendmail.php:137
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Mail\Transport\Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template.php(482): Zend_Mail->send()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template.php(534): Mage_Core_Model_Email_Template->send('kushagra.daharw...', 'BEM', Array)
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\local\Mage\Sales\Model\Order.php(1412): Mage_Core_Model_Email_Template->sendTransactional(2, Array, 'kushagra.daharw...', 'BEM', Array, 1)
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#9 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#10 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#11 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#12 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#13 {main}
+2015-02-19T09:12:43+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Mail\Transport\Sendmail.php:137
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Mail\Transport\Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template.php(482): Zend_Mail->send()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template.php(534): Mage_Core_Model_Email_Template->send(Array, Array, Array)
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template\Mailer.php(104): Mage_Core_Model_Email_Template->sendTransactional('3', 'sales', Array, Array, Array, '1')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1340): Mage_Core_Model_Email_Template_Mailer->send()
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#9 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#10 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#11 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#12 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#13 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#14 {main}
+2015-02-19T09:12:47+00:00 ERR (3): 
+exception 'Zend_Mail_Transport_Exception' with message 'Unable to send mail. ' in C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Mail\Transport\Sendmail.php:137
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Mail\Transport\Abstract.php(348): Zend_Mail_Transport_Sendmail->_sendMail()
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Mail.php(1194): Zend_Mail_Transport_Abstract->send(Object(Zend_Mail))
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template.php(482): Zend_Mail->send()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template.php(534): Mage_Core_Model_Email_Template->send('kushagra.daharw...', 'BEM', Array)
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1412): Mage_Core_Model_Email_Template->sendTransactional(2, Array, 'kushagra.daharw...', 'BEM', Array, 1)
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#9 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#10 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#11 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#12 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#13 {main}
+2015-02-27T09:03:40+00:00 ERR (3): 
+exception 'Exception' with message 'Notice: Undefined offset: 0  in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php on line 1379' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1379): mageCoreErrorHandler(8, 'Undefined offse...', 'C:\wamp\www\mag...', 1379, Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#9 {main}
+2015-03-02T08:22:03+00:00 ERR (3): 
+exception 'Exception' with message 'Notice: Undefined offset: 0  in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php on line 1379' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1379): mageCoreErrorHandler(8, 'Undefined offse...', 'C:\wamp\www\mag...', 1379, Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#9 {main}
+2015-03-03T06:13:07+00:00 ERR (3): 
+exception 'Exception' with message 'Notice: Undefined offset: 0  in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php on line 1379' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1379): mageCoreErrorHandler(8, 'Undefined offse...', 'C:\wamp\www\mag...', 1379, Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#9 {main}
+2015-03-03T06:16:40+00:00 ERR (3): 
+exception 'Exception' with message 'Notice: Undefined offset: 0  in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php on line 1379' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1379): mageCoreErrorHandler(8, 'Undefined offse...', 'C:\wamp\www\mag...', 1379, Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#9 {main}
+2015-03-03T06:23:09+00:00 ERR (3): 
+exception 'Exception' with message 'Notice: Undefined offset: 0  in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php on line 1379' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1379): mageCoreErrorHandler(8, 'Undefined offse...', 'C:\wamp\www\mag...', 1379, Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#9 {main}
+2015-03-03T06:28:31+00:00 ERR (3): 
+exception 'Exception' with message 'Notice: Undefined offset: 0  in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php on line 1379' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1379): mageCoreErrorHandler(8, 'Undefined offse...', 'C:\wamp\www\mag...', 1379, Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#9 {main}
+2015-03-03T07:17:51+00:00 ERR (3): 
+exception 'Exception' with message 'Notice: Undefined offset: 0  in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php on line 1379' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1379): mageCoreErrorHandler(8, 'Undefined offse...', 'C:\wamp\www\mag...', 1379, Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#9 {main}
+2015-03-04T09:55:17+00:00 ERR (3): 
+exception 'Exception' with message 'This letter cannot be sent.' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template.php:426
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template.php(534): Mage_Core_Model_Email_Template->send('kushagra.daharw...', 'kush dk', Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\local\Magestore\Productcontact\Model\Productcontact.php(55): Mage_Core_Model_Email_Template->sendTransactional('productcontact_...', '', 'kushagra.daharw...', 'kush dk', Array)
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\local\Magestore\Productcontact\controllers\IndexController.php(98): Magestore_Productcontact_Model_Productcontact->sendmailtocustomer(Object(Magestore_Productcontact_Model_Productcontact), '<table cellspac...')
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Magestore_Productcontact_IndexController->submitAction()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('submit')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#9 {main}
+2015-03-04T09:55:17+00:00 ERR (3): 
+exception 'Exception' with message 'This letter cannot be sent.' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template.php:426
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template.php(534): Mage_Core_Model_Email_Template->send('hello@example.c...', NULL, Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\local\Magestore\Productcontact\Model\Productcontact.php(117): Mage_Core_Model_Email_Template->sendTransactional('productcontact_...', '', 'hello@example.c...', NULL, Array)
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\local\Magestore\Productcontact\controllers\IndexController.php(99): Magestore_Productcontact_Model_Productcontact->sendmailtoadmin(Object(Magestore_Productcontact_Model_Productcontact), '<table cellspac...')
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Magestore_Productcontact_IndexController->submitAction()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('submit')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#9 {main}
+2015-03-04T11:13:39+00:00 ERR (3): 
+exception 'Exception' with message 'Warning: simplexml_load_string(): Entity: line 15: parser error : attributes construct error  in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Layout\Update.php on line 450' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 [internal function]: mageCoreErrorHandler(2, 'simplexml_load_...', 'C:\wamp\www\mag...', 450, Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Layout\Update.php(450): simplexml_load_string('<?xml version="...', 'Mage_Core_Model...')
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Layout\Update.php(275): Mage_Core_Model_Layout_Update->getFileLayoutUpdatesXml('frontend', 'rwd', 'default', '1')
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Layout\Update.php(347): Mage_Core_Model_Layout_Update->fetchFileLayoutUpdates()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Layout\Update.php(246): Mage_Core_Model_Layout_Update->fetchPackageLayoutUpdates('default')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Layout\Update.php(224): Mage_Core_Model_Layout_Update->merge('default')
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(306): Mage_Core_Model_Layout_Update->load()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Catalog\Helper\Product\View.php(61): Mage_Core_Controller_Varien_Action->loadLayoutUpdates()
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Catalog\Helper\Product\View.php(144): Mage_Catalog_Helper_Product_View->initProductLayout(Object(Mage_Catalog_Model_Product), Object(Mage_Catalog_ProductController))
+#9 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Catalog\controllers\ProductController.php(132): Mage_Catalog_Helper_Product_View->prepareAndRender(52, Object(Mage_Catalog_ProductController), Object(Varien_Object))
+#10 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Catalog_ProductController->viewAction()
+#11 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('view')
+#12 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#13 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#14 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#15 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#16 {main}
+2015-03-04T11:14:02+00:00 ERR (3): 
+exception 'Exception' with message 'Warning: simplexml_load_string(): Entity: line 39: parser error : Opening and ending tag mismatch: reference line 26 and block  in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Layout\Update.php on line 450' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 [internal function]: mageCoreErrorHandler(2, 'simplexml_load_...', 'C:\wamp\www\mag...', 450, Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Layout\Update.php(450): simplexml_load_string('<?xml version="...', 'Mage_Core_Model...')
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Layout\Update.php(275): Mage_Core_Model_Layout_Update->getFileLayoutUpdatesXml('frontend', 'rwd', 'default', '1')
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Layout\Update.php(347): Mage_Core_Model_Layout_Update->fetchFileLayoutUpdates()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Layout\Update.php(246): Mage_Core_Model_Layout_Update->fetchPackageLayoutUpdates('default')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Layout\Update.php(224): Mage_Core_Model_Layout_Update->merge('default')
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(306): Mage_Core_Model_Layout_Update->load()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Catalog\Helper\Product\View.php(61): Mage_Core_Controller_Varien_Action->loadLayoutUpdates()
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Catalog\Helper\Product\View.php(144): Mage_Catalog_Helper_Product_View->initProductLayout(Object(Mage_Catalog_Model_Product), Object(Mage_Catalog_ProductController))
+#9 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Catalog\controllers\ProductController.php(132): Mage_Catalog_Helper_Product_View->prepareAndRender(52, Object(Mage_Catalog_ProductController), Object(Varien_Object))
+#10 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Catalog_ProductController->viewAction()
+#11 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('view')
+#12 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#13 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#14 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#15 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#16 {main}
+2015-03-04T12:05:12+00:00 ERR (3): 
+exception 'Exception' with message 'This letter cannot be sent.' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template.php:426
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template.php(534): Mage_Core_Model_Email_Template->send('kushagra.daharw...', 'kush dk', Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\local\Magestore\Productcontact\Model\Productcontact.php(55): Mage_Core_Model_Email_Template->sendTransactional('productcontact_...', '', 'kushagra.daharw...', 'kush dk', Array)
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\local\Magestore\Productcontact\controllers\IndexController.php(98): Magestore_Productcontact_Model_Productcontact->sendmailtocustomer(Object(Magestore_Productcontact_Model_Productcontact), '<table cellspac...')
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Magestore_Productcontact_IndexController->submitAction()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('submit')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#9 {main}
+2015-03-04T12:05:12+00:00 ERR (3): 
+exception 'Exception' with message 'This letter cannot be sent.' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template.php:426
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Email\Template.php(534): Mage_Core_Model_Email_Template->send('hello@example.c...', NULL, Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\local\Magestore\Productcontact\Model\Productcontact.php(117): Mage_Core_Model_Email_Template->sendTransactional('productcontact_...', '', 'hello@example.c...', NULL, Array)
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\local\Magestore\Productcontact\controllers\IndexController.php(99): Magestore_Productcontact_Model_Productcontact->sendmailtoadmin(Object(Magestore_Productcontact_Model_Productcontact), '<table cellspac...')
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Magestore_Productcontact_IndexController->submitAction()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('submit')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#9 {main}
+2015-04-07T12:56:43+00:00 ERR (3): 
+exception 'PDOException' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '86' for key 'PRIMARY'' in C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Db\Statement\Pdo.php:228
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Db\Statement\Pdo.php(228): PDOStatement->execute(Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Varien\Db\Statement\Pdo\Mysql.php(110): Zend_Db_Statement_Pdo->_execute(Array)
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Zend\Db\Statement.php(291): Varien_Db_Statement_Pdo_Mysql->_execute(Array)
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Db\Adapter\Abstract.php(480): Zend_Db_Statement->execute(Array)
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Db\Adapter\Pdo\Abstract.php(238): Zend_Db_Adapter_Abstract->query('INSERT INTO `lo...', Array)
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Varien\Db\Adapter\Pdo\Mysql.php(428): Zend_Db_Adapter_Pdo_Abstract->query('INSERT INTO `lo...', Array)
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Db\Adapter\Abstract.php(576): Varien_Db_Adapter_Pdo_Mysql->query('INSERT INTO `lo...', Array)
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Log\Model\Resource\Visitor.php(261): Zend_Db_Adapter_Abstract->insert('log_quote', Array)
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Log\Model\Resource\Visitor.php(116): Mage_Log_Model_Resource_Visitor->_saveQuoteInfo(Object(Mage_Log_Model_Visitor))
+#9 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Resource\Db\Abstract.php(463): Mage_Log_Model_Resource_Visitor->_afterSave(Object(Mage_Log_Model_Visitor))
+#10 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Abstract.php(318): Mage_Core_Model_Resource_Db_Abstract->save(Object(Mage_Log_Model_Visitor))
+#11 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Log\Model\Visitor.php(207): Mage_Core_Model_Abstract->save()
+#12 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(1338): Mage_Log_Model_Visitor->saveByRequest(Object(Varien_Event_Observer))
+#13 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(1317): Mage_Core_Model_App->_callObserverMethod(Object(Mage_Log_Model_Visitor), 'saveByRequest', Object(Varien_Event_Observer))
+#14 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(448): Mage_Core_Model_App->dispatchEvent('controller_acti...', Array)
+#15 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(551): Mage::dispatchEvent('controller_acti...', Array)
+#16 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Front\Action.php(75): Mage_Core_Controller_Varien_Action->postDispatch()
+#17 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(422): Mage_Core_Controller_Front_Action->postDispatch()
+#18 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('add')
+#19 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#20 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#21 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#22 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#23 {main}
+
+Next exception 'Zend_Db_Statement_Exception' with message 'SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '86' for key 'PRIMARY'' in C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Db\Statement\Pdo.php:234
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Varien\Db\Statement\Pdo\Mysql.php(110): Zend_Db_Statement_Pdo->_execute(Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Zend\Db\Statement.php(291): Varien_Db_Statement_Pdo_Mysql->_execute(Array)
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Db\Adapter\Abstract.php(480): Zend_Db_Statement->execute(Array)
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Db\Adapter\Pdo\Abstract.php(238): Zend_Db_Adapter_Abstract->query('INSERT INTO `lo...', Array)
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Varien\Db\Adapter\Pdo\Mysql.php(428): Zend_Db_Adapter_Pdo_Abstract->query('INSERT INTO `lo...', Array)
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\lib\Zend\Db\Adapter\Abstract.php(576): Varien_Db_Adapter_Pdo_Mysql->query('INSERT INTO `lo...', Array)
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Log\Model\Resource\Visitor.php(261): Zend_Db_Adapter_Abstract->insert('log_quote', Array)
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Log\Model\Resource\Visitor.php(116): Mage_Log_Model_Resource_Visitor->_saveQuoteInfo(Object(Mage_Log_Model_Visitor))
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Resource\Db\Abstract.php(463): Mage_Log_Model_Resource_Visitor->_afterSave(Object(Mage_Log_Model_Visitor))
+#9 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\Abstract.php(318): Mage_Core_Model_Resource_Db_Abstract->save(Object(Mage_Log_Model_Visitor))
+#10 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Log\Model\Visitor.php(207): Mage_Core_Model_Abstract->save()
+#11 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(1338): Mage_Log_Model_Visitor->saveByRequest(Object(Varien_Event_Observer))
+#12 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(1317): Mage_Core_Model_App->_callObserverMethod(Object(Mage_Log_Model_Visitor), 'saveByRequest', Object(Varien_Event_Observer))
+#13 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(448): Mage_Core_Model_App->dispatchEvent('controller_acti...', Array)
+#14 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(551): Mage::dispatchEvent('controller_acti...', Array)
+#15 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Front\Action.php(75): Mage_Core_Controller_Varien_Action->postDispatch()
+#16 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(422): Mage_Core_Controller_Front_Action->postDispatch()
+#17 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('add')
+#18 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#19 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#20 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#21 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#22 {main}
+2015-04-07T13:02:40+00:00 ERR (3): 
+exception 'Exception' with message 'Notice: Undefined offset: 0  in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php on line 1379' in C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\functions.php:245
+Stack trace:
+#0 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Sales\Model\Order.php(1379): mageCoreErrorHandler(8, 'Undefined offse...', 'C:\wamp\www\mag...', 1379, Array)
+#1 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\Model\Type\Onepage.php(814): Mage_Sales_Model_Order->sendNewOrderEmail()
+#2 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Checkout\controllers\OnepageController.php(579): Mage_Checkout_Model_Type_Onepage->saveOrder()
+#3 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Action.php(418): Mage_Checkout_OnepageController->saveOrderAction()
+#4 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Router\Standard.php(250): Mage_Core_Controller_Varien_Action->dispatch('saveOrder')
+#5 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Controller\Varien\Front.php(172): Mage_Core_Controller_Varien_Router_Standard->match(Object(Mage_Core_Controller_Request_Http))
+#6 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\code\core\Mage\Core\Model\App.php(354): Mage_Core_Controller_Varien_Front->dispatch()
+#7 C:\wamp\www\magento-1.8.1.0\mg_do1test\app\Mage.php(684): Mage_Core_Model_App->run(Array)
+#8 C:\wamp\www\magento-1.8.1.0\mg_do1test\index.php(87): Mage::run('', 'store')
+#9 {main}

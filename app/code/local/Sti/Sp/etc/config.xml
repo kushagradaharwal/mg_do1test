@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Sti_Sp>
+            <module>0.0.1</module>
+        </Sti_Sp>
+    </modules>
+    <global>
+        <models>
+            <sti_sp>
+                <class>Sti_Sp_Model</class>
+            </sti_sp>
+        </models>
+    </global>
+    <!-- Default configuration -->
+    <default>
+        <carriers>
+            <storepickup>
+                <active>1</active>
+                <!--
+                     This configuration should not be made visible
+                     to the administrator, because it specifies
+                     the model to be used for this carrier.
+                -->
+                <model>sti_sp/carrier</model>
+                <!--
+                    The title as referenced in the carrier class
+                -->
+                <title>Store Pickup</title>
+                <!--
+                    The sort order specifies the position that
+                    this carrier appears relative to the other
+                    carriers available in checkout.
+                -->
+                <sort_order>10</sort_order>
+                <!--
+                    Out of the box, Magento offers shipping
+                    carriers the ability to restrict themselves
+                    to specific countries. For this configuration
+                    option, 0 means allow all countries available,
+                    and 1 means allow all countries specified
+                    in the country list that we will add later
+                    in system.xml
+                -->
+                <sallowspecific>0</sallowspecific>
+            </storepickup>
+        </carriers>
+    </default>
+</config>

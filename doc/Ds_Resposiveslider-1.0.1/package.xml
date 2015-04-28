@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<package>
+    <name>Ds_Resposiveslider</name>
+    <version>1.0.1</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">OSL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Ds Responsive Slider is simple jquery library extension and is one of the few fully responsive image slider for Magento which gives a lot of features in admin to configure the slider witout any coding needed for creating easy responsive slider and organize your images and show as slider with effect.</summary>
+    <description>&lt;b&gt;Features&lt;/b&gt;&lt;br/&gt;&#xD;
+&lt;ul&gt;&#xD;
+&lt;li&gt;Multi browsers support : IE, FireFox, Safari, Chrome, Opera (fully tested)&lt;/li&gt;&#xD;
+&lt;li&gt;Ability to disable jQuery if already exists&lt;/li&gt;&#xD;
+&lt;li&gt;Different types of mode effects&lt;/li&gt;&#xD;
+&lt;li&gt;Ability to insert slider in any CMS page&lt;/li&gt;&#xD;
+&lt;li&gt;Ability to insert slider via widgets, CMS page, CMS block, and layout&lt;/li&gt;&#xD;
+&lt;li&gt;Ability to add URL on image&lt;/li&gt;&#xD;
+&lt;li&gt;Ability to active or inactive image to display on frontend.&lt;/li&gt;&#xD;
+&lt;li&gt;Ability to manage speed for the slider.&lt;/li&gt;&#xD;
+&lt;li&gt;Ability to control the option of displaying start or next button, next previos button, pager etc.&lt;/li&gt;&#xD;
+&lt;li&gt;Customise css and editable image for next or prev button and pager images.&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&#xD;
+&#xD;
+&lt;b&gt;Installation&lt;/b&gt;&#xD;
+Go to magento connect manager and paste the extension key and click install.&#xD;
+&lt;br/&gt;&#xD;
+After installation to display slider on any cms page paste the below line of code in any cms page(like homepage, about us) content:&#xD;
+&lt;br/&gt;&lt;br/&gt;&#xD;
+{{block type="resposiveslider/slider" template="dsresposiveslider/slider.phtml"}}&#xD;
+&lt;br/&gt;</description>
+    <notes>The extension uses jquery library for various actions. If your website have already included the jquery library then in the extension system configuration you can disable the erxtension jquery file to avoid the conflictions.&#xD;
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&#xD;
+Please logout and login again in the admin backend after installing the extension to avoid the 404 error in extension configuration page as this is a common magento problem.&#xD;
+&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;</notes>
+    <authors><author><name>Dotsquares ltd</name><user>Dotsquares</user><email>support.extensions@dotsquares.com</email></author><author><name>Dinesh</name><user>Dinesh</user><email>kumar.dinesh@dotsquares.com</email></author></authors>
+    <date>2013-12-30</date>
+    <time>04:35:29</time>
+    <contents><target name="magecommunity"><dir name="Ds"><dir name="Resposiveslider"><dir name="Block"><dir name="Adminhtml"><dir name="Resposiveslider"><dir name="Edit"><file name="Form.php" hash="a2bef1ac37e9cc6e7e83da0d7048da23"/><dir name="Tab"><file name="Form.php" hash="a6f798f95a42620946bca5d6ed4c7271"/></dir><file name="Tabs.php" hash="73b301dfc1bf773ed57b725e45f9b372"/></dir><file name="Edit.php" hash="a0ba967f52993314030d044bf8fa5892"/><file name="Grid.php" hash="a75b1109c9f39fe3c1dcde44c79e35e4"/></dir><file name="Resposiveslider.php" hash="4962c0bd6d983cdf398cdb1fcaeb5198"/></dir><file name="Slider.php" hash="598e0894fe5dba2f8e943557b2233dcb"/></dir><dir name="Helper"><file name="Data.php" hash="8cc5a9b4c51de33c64e166ccb51053f5"/></dir><dir name="Model"><dir name="Mysql4"><dir name="Resposiveslider"><file name="Collection.php" hash="dc4abe5c7217a1a2fb707461ab777cf2"/></dir><file name="Resposiveslider.php" hash="c508a871ba20626bd5e5c3e8689c3bf6"/></dir><file name="Resposiveslider.php" hash="241aa650e19b6ac4885603bf81d743d9"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="ResposivesliderController.php" hash="4864bf8b20980e01468e739600aab049"/></dir></dir><dir name="etc"><file name="adminhtml.xml" hash="a7adb606d7b8cb9f7515c109de5e3b9a"/><file name="config.xml" hash="da637b91a44260c314cd031224aaf756"/><file name="system.xml" hash="d161fc80078c9177eaa2b7142e08925b"/></dir><dir name="sql"><dir name="resposiveslider_setup"><file name="mysql4-install-1.0.1.php" hash="102ad6062a3619629f8028db2a5052fd"/></dir></dir></dir></dir><dir name="Mage"><dir name="Adminhtml"><dir name="Model"><dir name="System"><dir name="Config"><dir name="Source"><file name="Diyoptions13877815991.php" hash="43f7645ba08a179948714d5cfe47dc21"/><file name="Diyoptions13877815996.php" hash="ee7ea4b775d63ce3290680b383a68bc7"/><file name="Diyoptions13877819351.php" hash="6cd33d1d961a34379783d53db35cf8df"/><file name="Diyoptions13877819356.php" hash="bf69fc71e089a4cc65d977e79df90916"/></dir></dir></dir></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="template"><dir name="dsresposiveslider"><file name="slider.phtml" hash="15d394b2078f7cbb4e9a725aeac74792"/></dir></dir></dir></dir></dir><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="resposiveslider.xml" hash="4e61a910cfcf0283f7c3d94ecc00d510"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Ds_Resposiveslider.xml" hash="39df04aaa90cce83e6e04ff26007755e"/></dir></target><target name="mageskin"><dir name="frontend"><dir name="base"><dir name="default"><dir name="css"><dir name="dsresponsiveslider"><dir name="images"><file name="bx_loader.gif" hash="931bdb6b50816b03206c66921760b246"/><file name="controls.png" hash="d9d25372f38c6b242b9b51d5841fe86e"/></dir><file name="jquery.dsslider.css" hash="17c3213c33a6cee1ad4748ccc48d75de"/></dir></dir><dir name="js"><dir name="dsresponsiveslider"><file name="jquery.dsslider.min.js" hash="b860635957ed570deb2cf994bd9a4913"/><file name="jquery.js" hash="4ee23893d0a77363024f93496d3573bc"/></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>5.4.0</max></php></required></dependencies>
+</package>

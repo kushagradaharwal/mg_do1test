@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Advanced_Ca>
+            <version>0.1.1</version>
+        </Advanced_Ca>
+    </modules>
+ 
+
+
+    <global>
+  
+        <resources>
+            <ca_setup>
+                <setup>
+                    <module>Advanced_Ca</module>
+                    <class>Mage_Customer_Model_Entity_Setup</class>
+                </setup>
+            </ca_setup>
+ 
+        </resources>
+
+    <fieldsets>
+        <sales_convert_quote_address>
+        <resale>
+            <to_order_address>*</to_order_address>
+                <to_customer_address>*</to_customer_address>
+        </resale>
+        </sales_convert_quote_address>
+        <sales_convert_order_address>
+        <resale><to_quote_address>*</to_quote_address></resale>
+        </sales_convert_order_address>
+    </fieldsets>
+    <!-- billing address -->
+
+    </global>
+</config>

@@ -1,0 +1,203 @@
+
+<form action="<?php echo $this->getUrl("consulting/consulting/submit"); ?>" id="contactcusomerForm" method="post" 
+enctype ="multipart/form-data">
+    <div class="fieldset">
+        <p class="required"><?php echo Mage::helper('contacts')->__('* Required Fields') ?></p>
+        <ul class="form-list">
+            <li class="fields">
+                <div class="field">
+                    <label for="name" class="required"><em>*</em><?php echo Mage::helper('contacts')->__('Name') ?></label>
+                    <div class="input-box">
+                        <input name="name" id="name" title="<?php echo Mage::helper('contacts')->__('Name') ?>" value="<?php echo $this->escapeHtml($this->helper('contacts')->getUserName()) ?>" class="input-text required-entry" type="text" />
+                    </div>
+                </div>
+				
+				<div class="field">
+                    <label for="jobtitle" class="required"><em>*</em><?php echo Mage::helper('contacts')->__('Job Title') ?></label>
+                    <div class="input-box">
+                        <input name="jobtitle" id="jobtitle" title="<?php echo Mage::helper('contacts')->__('Job Title') ?>"  class="input-text required-entry" type="text" />
+                    </div>
+                </div>
+				
+				
+				<div class="field">
+                    <label for="company" class="required"><em>*</em><?php echo Mage::helper('contacts')->__('Company') ?></label>
+                    <div class="input-box">
+                        <input name="company" id="company" title="<?php echo Mage::helper('contacts')->__('Company') ?>"  class="input-text required-entry" type="text" />
+                    </div>
+                </div>
+				
+                <div class="field">
+                    <label for="email" class="required"><em>*</em><?php echo Mage::helper('contacts')->__('Offcial Email') ?></label>
+                    <div class="input-box">
+                        <input name="email" id="email" title="<?php echo Mage::helper('contacts')->__('Offcial Email') ?>" value="<?php echo $this->escapeHtml($this->helper('contacts')->getUserEmail()) ?>" class="input-text required-entry validate-email" type="email" autocapitalize="off" autocorrect="off" spellcheck="false" />
+                    </div>
+                </div>
+            </li>
+			
+			 <li>
+                <label for="telephone"><?php echo Mage::helper('contacts')->__('Phone') ?></label>
+                <div class="input-box">
+                    <input name="telephone" id="telephone" title="<?php echo Mage::helper('contacts')->__('Phone') ?>" value="" class="input-text required-entry" type="tel" />
+                </div>
+            </li>
+			<li>
+                <label for="mobile"><?php echo Mage::helper('contacts')->__('Mobile') ?></label>
+                <div class="input-box">
+                    <input name="mobile" id="mobile" title="<?php echo Mage::helper('contacts')->__('Mobile') ?>" value="" class="input-text" type="tel" />
+                </div>
+            </li>
+			
+			 <li>
+                <label for="project"><?php echo Mage::helper('contacts')->__('Project Brief') ?></label>
+                <div class="input-box">
+                    <textarea name="project" id="project" title="<?php echo Mage::helper('contacts')->__('Project Brief') ?>" class="input-text required-entry" cols="5" rows="1"></textarea>
+                </div>
+            </li>
+            
+			<li>
+                <label for="date"><?php echo Mage::helper('contacts')->__('Preferred Date for Call') ?></label>
+                <div class="input-box">
+                    <input name="date" id="date" title="<?php echo Mage::helper('contacts')->__('Preferred Date for Call') ?>" value="" class="input-text" />
+                </div>
+            </li>
+			<li>
+                <label for="time"><?php echo Mage::helper('contacts')->__('Preferred Time for Call') ?></label>
+                <div class="input-box">
+                    <input name="time" id="time" title="<?php echo Mage::helper('contacts')->__('Preferred Time for Call') ?>" value="" class="input-text" />
+                </div>
+            </li>
+		  	<li class="wide">
+						<div class="input-box">
+							<img src="<?php echo $this->getUrl('consulting/consulting/imagecaptcha');?>" id="captcha_image" />
+						</div>
+					
+					<div class="clear"></div>
+					<span><a href="" onclick="refreshImage();return false;"><?php echo $this->__("Refresh"); ?></a></span>
+					<br/>
+					<?php
+//or limit by age requirement
+echo date_dropdown(18);
+?>
+					<div class="left">
+						<div class="left"><label class="required"><?php echo $this->__('Enter the text above');?><em>*</em></label></div>
+						<div class="left">
+							<input type="text" name="captcha_text" class="required-entry input-text captcha-input" id="captcha_text" value="" />
+						</div>
+					</div>
+					<br/>
+				</li>
+				
+				<li>
+				<?php
+              echo   time_dropdown();
+  
+				?>
+				</li>
+			<li>
+                <label for="time"><?php echo Mage::helper('contacts')->__('Captcha') ?></label>
+                <div class="input-box">
+                    <input name="time" id="time" title="<?php echo Mage::helper('contacts')->__('Captcha') ?>" value="" class="input-text" />
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="buttons-set">
+        <button type="submit" title="<?php echo Mage::helper('contacts')->__('Submit') ?>" class="button"><span><span><?php echo Mage::helper('contacts')->__('Submit') ?></span></span></button>
+    </div>
+</form>
+<?php
+function date_dropdown($year_limit = 0){
+        $html_output = '    <div id="date_select" >'."\n";
+        $html_output .= '        <label for="date_day">Date of birth:</label>'."\n";
+
+        /*days*/
+        $html_output .= '           <select name="date_day" id="day_select">'."\n";
+            for ($day = 1; $day <= 31; $day++) {
+                $html_output .= '               <option>' . $day . '</option>'."\n";
+            }
+        $html_output .= '           </select>'."\n";
+
+        /*months*/
+        $html_output .= '           <select name="date_month" id="month_select" >'."\n";
+        $months = array("", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+            for ($month = 1; $month <= 12; $month++) {
+                $html_output .= '               <option value="' . $month . '">' . $months[$month] . '</option>'."\n";
+            }
+        $html_output .= '           </select>'."\n";
+
+        /*years*/
+        $html_output .= '           <select name="date_year" id="year_select">'."\n";
+            for ($year = 1900; $year <= (date("Y") - $year_limit); $year++) {
+                $html_output .= '               <option>' . $year . '</option>'."\n";
+            }
+        $html_output .= '           </select>'."\n";
+
+        $html_output .= '   </div>'."\n";
+    return $html_output;
+}
+
+
+
+
+function time_dropdown(){
+        $html_output = '    <div id="date_select" >'."\n";
+        $html_output .= '        <label for="date_day">Time:</label>'."\n";
+
+        /*days*/
+        $html_output .= '           <select name="time_format_time" id="time_format_time">'."\n";
+            for ($time = 1; $time <= 12; $time++) {
+                $html_output .= '               <option>' . $time . '</option>'."\n";
+            }
+        $html_output .= '           </select>'."\n";
+
+        /*ap/pm*/
+        $html_output .= '           <select name="time_format" id="time_format_ampm" >'."\n";
+        $ampms = array("", "AM","PM");
+            for ($ampm = 1; $ampm <= 2; $ampm++) {
+                $html_output .= '               <option value="' . $ampm . '">' . $ampms[$ampm] . '</option>'."\n";
+            }
+        $html_output .= '           </select>'."\n";
+
+        
+        $html_output .= '   </div>'."\n";
+    return $html_output;
+}
+?>
+<script type="text/javascript">
+//<![CDATA[
+    var contactForm = new VarienForm('contactcusomerForm', true);
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+    var contactForm = new VarienForm('productcontactForm', true);
+	
+	function refreshImage() {	
+		url = '<?php echo $this->getUrl('consulting/consulting/refreshcaptcha');?>';			
+	  //   $('captcha_image').src = '';
+        $('captcha_image').src = '<?php echo  $this->getSkinUrl("images/ajax-loader.GIF")?>';
+		capchaRefesh = new Ajax.Request(url, {
+
+			method: 'get',
+
+			onSuccess: function(transport) {
+
+				imageCapcha = new Image();
+
+				imageCapcha.src = transport.responseText;
+
+				$('captcha_image').src = imageCapcha.src;
+
+			}
+
+		});
+	}
+	
+	// var productcontact = new Productcontact('productcontactForm', '<?php echo $this->getUrl('productcontact/index/submit');?>' );
+	
+</script>
+<style>
+.form-list select{ width:0px !important;}
+</style>
+

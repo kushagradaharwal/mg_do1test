@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <orderfeedback translate="label" module="orderfeedback">
+            <label>Orderfeedback Extension</label>
+            <sort_order>420</sort_order>
+        </orderfeedback>
+    </tabs>
+	<sections>
+		<orderfeedback translate="label" module="orderfeedback">
+			<label>Configuration</label>
+			<tab>orderfeedback</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>888</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+                		<orderfeedback>
+					<label>Enable or Disable</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>140</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<enable translate="label">
+							<label>Enable Or Disable:</label>
+							<comment></comment>
+							<frontend_type>select</frontend_type>
+							<sort_order>110</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<can_be_empty>1</can_be_empty>
+                                                        <source_model>adminhtml/system_config_source_enabledisable</source_model>
+							<!--<source_model>orderfeedback/type</source_model>-->
+						</enable>
+                                                
+                                                <sender_email translate="label">
+							<label>Sender Email:</label>
+							<comment>Default is store General Contact Sender Email</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>120</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<can_be_empty>1</can_be_empty>
+						</sender_email>
+                                                
+                                                 <sender_name translate="label">
+							<label>Sender Name:</label>
+							<comment>Default is store General Contact Sender Name</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>120</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<can_be_empty>1</can_be_empty>
+						</sender_name>
+                                                
+                                                <email_tempalte_subject_frontend translate="label">
+                                                        <label>Email Subject:</label>
+                                                        <comment>Email Subject [order_id]</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>130</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<can_be_empty>1</can_be_empty>
+                                                </email_tempalte_subject_frontend>
+                                                
+                                                 <email_tempalte_subject_admin translate="label">
+                                                        <label>Email Subject For Admin:</label>
+                                                        <comment>Email Subject For Admin Email [order_id]</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>140</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<can_be_empty>1</can_be_empty>
+                                                </email_tempalte_subject_admin>
+                                                
+                                                <email_template_customer translate="label">
+							<label>Email Template Customer:</label>
+							<comment>Select Email Template For Customer</comment>
+							<frontend_type>select</frontend_type>
+							<sort_order>150</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<can_be_empty>1</can_be_empty>
+                                                        <source_model>orderfeedback/allemailtemplate</source_model>
+						</email_template_customer>
+                                                
+                                                 <email_template_admin translate="label">
+							<label>Email Template Admin:</label>
+							<comment>Select Email Template For Admin Feedback</comment>
+							<frontend_type>select</frontend_type>
+							<sort_order>160</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<can_be_empty>1</can_be_empty>
+                                                        <source_model>orderfeedback/allemailtemplate</source_model>
+						</email_template_admin>
+                                                
+                                                
+                                                  <feedbackpage_title translate="label">
+							<label>Page Title:</label>
+							<comment>Configure Page Title</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>170</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<can_be_empty>1</can_be_empty>
+						  </feedbackpage_title>
+                                                  
+                                                   <page_layout_option translate="label">
+							<label>Page Layout:</label>
+							<comment>Select Page Layout For Orderfeedback Page</comment>
+							<frontend_type>select</frontend_type>
+							<sort_order>180</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<can_be_empty>1</can_be_empty>
+                                                        <source_model>orderfeedback/pagelayout</source_model>
+						  </page_layout_option>
+                                                
+                                                
+                                                   <successmessage translate="label">
+							<label>Success Message:</label>
+							<comment>Configure Seccuss Message</comment>
+							<frontend_type>text</frontend_type>
+							<sort_order>200</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<can_be_empty>1</can_be_empty>
+						  </successmessage>
+                                        </fields>	
+				</orderfeedback>		
+			</groups>
+		</orderfeedback>
+	</sections>
+</config>

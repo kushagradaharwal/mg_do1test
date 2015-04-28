@@ -1,0 +1,115 @@
+<?php 
+/*
+* 
+*Module order feedback 
+*
+* 
+*/
+?>
+<?php
+$fieldvalue = $this->helper("orderfeedback")->getFieldenabledisable();
+if($fieldvalue  == 1) :
+if(count($this->getOrders())):
+$allorders = $this->getOrders();
+?>
+<div class="selectboxorderfeed">
+<fieldset>
+<div class="selectorder">Select the Order</div>
+<span class='ajax_loadermain' style='display:none'><img src='<?php echo $this->getSkinUrl('images/ajax_loader.gif')?>'/></span>
+
+<select  id="allorderfeedback">
+<option value="selectorder"><?php echo "Select Any Order" ?></option> 
+<?php 
+$lastid = array();//array to store last  order id
+$lastincid = array();  //array to store last end order increment id
+foreach($allorders as $allordersdetails){ 
+$allordersdetails['increment_id'];
+    ?>
+<?php $lastid[] = $allordersdetails['entity_id'];?> 
+<?php $lastincid[] = $allordersdetails['increment_id'];?> 
+
+<option  <?php if($allordersdetails['entity_id']== '1'){ ?> selected="selected" <?php } ?> value="<?php  echo $allordersdetails['entity_id']."_".$allordersdetails['increment_id']; //$allordersdetails['increment_id'];?>" id="<?php echo $allordersdetails['entity_id'];?>"><?php  echo  $allordersdetails['increment_id'];?></option>
+<?php } ?>
+
+</select>
+</fieldset>
+</div>
+<script type="text/javascript">
+    
+    
+jQuery("#allorderfeedback").change(function()
+{
+var idval = jQuery("#allorderfeedback").val().split("_");
+var id = idval['0']; 
+var incrementid = idval['1'];      
+
+
+if(id == "selectorder")
+{
+     jQuery(".form_table").hide();
+     jQuery(".getorder").hide();
+     alert("Please Select Any Order From Order Dropdown");
+     //document.write("<h1> Please Select Any Order From Order Dropdown</h1>");
+}
+
+else
+{
+    jQuery(".ajax_loadermain").show();
+     jQuery(".form_table").show();
+     jQuery(".getorder").show();
+    jQuery.ajax({
+    url: '<?php echo $this->getUrl('orderfeedback/index/allorders');?>',
+    type: 'POST',
+    //dataType: 'json',
+    data:{entity : id,incid :incrementid},
+    success:function(data){
+    jQuery(".ajax_loadermain").hide();
+    //alert(data);
+    jQuery(".messages").fadeOut('xfast');
+
+    jQuery(".getorder").html(data);
+
+}
+
+});
+}
+});
+
+//getOrderId(<?php echo current($lastid); ?>);
+</script>
+
+<script type="text/javascript">
+    jQuery(".ajax_loadermain").show();
+jQuery(window).load(function () {
+    jQuery(".ajax_loadermain").show();
+
+var endid = <?php echo end($lastid); ?>;
+var endincid = <?php echo end($lastincid); ?>;
+jQuery.ajax({
+url: '<?php echo $this->getUrl('orderfeedback/index/allorders');?>endid/'+endid,
+type: 'POST',
+//dataType: 'json',
+data:{entity : endid,incid : endincid},
+success:function(data){
+jQuery(".ajax_loadermain").hide();
+//alert(data);
+ jQuery(".messages").fadeOut('xfast');
+jQuery(".getorder").html(data);
+
+}
+});
+
+});
+</script>
+
+<div class="getorder"></div><div class="editdiv"></div>
+<?php // echo $this->getChildHtml("orderdata");?>
+<?php else:?>
+<div class="segment_headerselect" style="width:auto;text-align:Center;">
+<?php  echo $this->__("You have no orders.");?>
+<br/>
+<br/>
+<button type="button" title="Checkout" class="button" onclick="setLocation('<?php echo $this->getUrl(); ?>')" style=""><span><span>Continue Shopping</span></span></button>
+</div>
+<?php endif;?>
+<?php endif;?>

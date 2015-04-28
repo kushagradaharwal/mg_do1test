@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Clarion_Orderfeedback>
+            <version>0.1.0</version>
+        </Clarion_Orderfeedback>
+    </modules>
+    <frontend>
+        <routers>
+            <orderfeedback>
+                <use>standard</use>
+                <args>
+                    <module>Clarion_Orderfeedback</module>
+                    <frontName>orderfeedback</frontName>
+                </args>
+            </orderfeedback>
+        </routers>
+        <layout>
+            <updates>
+                <orderfeedback>
+                    <file>orderfeedback.xml</file>
+                </orderfeedback>
+            </updates>
+        </layout>
+    </frontend>
+    <adminhtml>
+		<acl>
+          <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <orderfeedback>
+                                        <title>Orderfeedback</title>
+                                    </orderfeedback>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</adminhtml>
+
+    <admin>
+        <routers>
+			<orderfeedback>
+				<use>admin</use>
+				<args>
+					<module>Clarion_Orderfeedback</module>
+					<frontName>orderfeedback</frontName>
+				</args>
+			</orderfeedback>
+        </routers>
+    </admin>
+    <adminhtml>
+		<menu>
+			<orderfeedback module="orderfeedback">
+				<title>Orderfeedback</title>
+				<sort_order>71</sort_order>               
+				<children>
+					<items module="orderfeedback">
+						<title>Manage Items</title>
+						<sort_order>0</sort_order>
+						<action>orderfeedback/adminhtml_orderfeedback</action>
+					</items>
+                                        <itemssetting module="orderfeedback">
+						<title>Configuration</title>
+						<sort_order>10</sort_order>
+						<action>adminhtml/system_config/edit/section/orderfeedback</action>
+					</itemssetting>
+				</children>
+			</orderfeedback>
+		</menu>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<Clarion_Orderfeedback>
+							<title>Orderfeedback Module</title>
+							<sort_order>10</sort_order>
+						</Clarion_Orderfeedback>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+		<layout>
+			<updates>
+				<orderfeedback>
+					<file>orderfeedback.xml</file>
+				</orderfeedback>
+			</updates>
+		</layout>
+    </adminhtml>   
+    <global>
+        <models>
+            <orderfeedback>
+                <class>Clarion_Orderfeedback_Model</class>
+                <resourceModel>orderfeedback_mysql4</resourceModel>
+            </orderfeedback>
+            <orderfeedback_mysql4>
+                <class>Clarion_Orderfeedback_Model_Mysql4</class>
+                <entities>
+                    <orderfeedback>
+                        <table>orderfeedback</table>
+                    </orderfeedback>
+                </entities>
+            </orderfeedback_mysql4>
+            
+             <!--<sales>
+            <rewrite>
+                <order>Clarion_Orderfeedback_Model_Order</order>
+            </rewrite>
+            </sales>-->
+          <orderfeedback_adminhtml>
+           <class>Clarion_Orderfeedback_Adminhtml_Model</class>
+         </orderfeedback_adminhtml>
+        </models>
+        <resources>
+            <orderfeedback_setup>
+                <setup>
+                    <module>Clarion_Orderfeedback</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </orderfeedback_setup>
+            <orderfeedback_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </orderfeedback_write>
+            <orderfeedback_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </orderfeedback_read>
+        </resources>
+        <blocks>
+            <orderfeedback>
+                <class>Clarion_Orderfeedback_Block</class>
+            </orderfeedback>
+        </blocks>
+        <helpers>
+            <orderfeedback>
+                <class>Clarion_Orderfeedback_Helper</class>
+            </orderfeedback>
+        </helpers>
+        
+        <template>
+        <email>
+            <order_feedback_email_customer module="orderfeedback">
+                <label>Order Feedback Email Customer</label>
+                <file>orderfeedback/order_feedback_email_customer.html</file>
+                <type>html</type>
+            </order_feedback_email_customer>
+            
+             <order_feedback_email_adminfeedback module="orderfeedback">
+                <label>Order Feedback Email Admin Feedback</label>
+                <file>orderfeedback/order_feedback_email_adminfeedback.html</file>
+                <type>html</type>
+            </order_feedback_email_adminfeedback>
+            
+        </email>
+        </template>
+    </global>
+    
+    <default>
+        <orderfeedback>
+              <orderfeedback>
+                  <enable>Enable</enable>
+                  <email_template_customer>order_feedback_email_customer</email_template_customer>
+                  <email_template_admin>order_feedback_email_adminfeedback</email_template_admin>
+                  <showonordersucesspage>1</showonordersucesspage>
+              </orderfeedback>
+        </orderfeedback>
+    </default>
+    
+</config>

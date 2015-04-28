@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        
+    </default>
+
+
+  
+   <sales_order_history>
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+        
+        <reference name="sales.order.history">
+              <action method="setTemplate"><template>orderfeedback/sales/order/history.phtml</template></action>
+        </reference> 
+     </sales_order_history>
+     
+     <orderfeedback_orderfeedback_view ifconfig="orderfeedback_orderfeedback_blockpostion">
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/clarion/clarion_orderfeedback.css</stylesheet></action>
+            <action method="addItem"><type>skin_js</type><name>js/orderfeedback/jquery.min.js</name></action> 
+            <action method="addItem"><type>skin_js</type><name>js/orderfeedback/noconflict.js</name></action> 
+            
+        </reference>
+       <update handle="customer_account"/>
+        <reference name="left">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+        
+       <reference name="content">
+            <block type="orderfeedback/orderfeedback" name="feedback" template="orderfeedback/orderfeedback.phtml"/>
+       </reference>
+        
+     </orderfeedback_orderfeedback_view>
+     
+     <orderfeedback_index_index>
+  
+        <update handle="customer_account"/>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/clarion/clarion_orderfeedback.css</stylesheet></action>
+             <action method="addItem"><type>skin_js</type><name>js/orderfeedback/jquery.min.js</name></action> 
+            <action method="addItem"><type>skin_js</type><name>js/orderfeedback/noconflict.js</name></action> 
+        </reference>
+        <reference name="left">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+        
+       <reference name="content">
+            <block type="orderfeedback/allorderfeedback" name="allfeedback" template="orderfeedback/allorderfeedback.phtml"/>
+       </reference>
+        
+     </orderfeedback_index_index>
+     
+      <orderfeedback_index_edit>
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+        <update handle="customer_account"/>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/clarion/clarion_orderfeedback.css</stylesheet></action>
+             <action method="addItem"><type>skin_js</type><name>js/orderfeedback/jquery.min.js</name></action> 
+            <action method="addItem"><type>skin_js</type><name>js/orderfeedback/noconflict.js</name></action>  
+        </reference>
+        <reference name="left">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+        
+       <reference name="content">
+            <block type="orderfeedback/editorder" name="editfeedback" template="orderfeedback/editorder.phtml"/>
+       </reference>
+        
+     </orderfeedback_index_edit>
+     
+      <orderfeedback_index_pagination>
+        <reference name="root">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+        <update handle="customer_account"/>
+        <reference name="head">
+            <action method="addCss"><stylesheet>css/clarion/clarion_orderfeedback.css</stylesheet></action>
+             <action method="addItem"><type>skin_js</type><name>js/orderfeedback/jquery.min.js</name></action> 
+            <action method="addItem"><type>skin_js</type><name>js/orderfeedback/noconflict.js</name></action>  
+        </reference>
+        <reference name="left">
+            <action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+        </reference>
+        
+       <reference name="content">
+            <block type="orderfeedback/feedbackpagi" name="feedbackpagi" template="orderfeedback/feedbackpagi.phtml"/>
+       </reference>
+        
+     </orderfeedback_index_pagination>
+     
+     <customer_account>
+        <!-- Feedback order -->
+        <reference name="customer_account_navigation"> 
+            <action method="addLink" translate="label" module="orderfeedback" ifconfig ="orderfeedback/orderfeedback/enable"><name>order feedback</name><path>orderfeedback/index/index/</path><label>Order Feedback</label></action>
+        </reference>
+    </customer_account>
+   
+</layout> 
