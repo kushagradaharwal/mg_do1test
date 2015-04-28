@@ -124,16 +124,15 @@ class Excellence_Ajax_IndexController extends Mage_Checkout_CartController
     //echo "yes id in cart"; 
     if($cartitem < 5)
 	{
-	   $this->_redirect('checkout/cart');
-	   //echo "<script type='text/javascript'>";
-	  //echo 'alert("you have to select atleast 5 items in cart for checkout")';
-	  //echo "</script>";
+	  echo "<script type='text/javascript'>";
+	  echo 'alert("you have to select atleast 5 items in cart for checkout")';
+	  echo "</script>";
 	}
    }
    else
    {
-     $this->_redirect('checkout/cart');
-	 //echo "id is not in cart";
+     
+	 echo "id is not in cart";
    }
    
  }
